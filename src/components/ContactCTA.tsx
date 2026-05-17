@@ -60,19 +60,7 @@ export default function ContactCTA() {
                 />
 
                 <div className="mt-8 grid gap-3">
-                  <a
-                    href="tel:5038600441"
-                    className="rounded-[2rem] border border-[var(--line)] bg-[rgba(13,17,16,0.56)] p-5 transition hover:border-[var(--amber)]/45 hover:bg-[rgba(198,139,69,0.08)]"
-                  >
-                    <p className="font-mono-custom text-xs font-black uppercase tracking-[0.14em] text-[var(--amber-soft)]">
-                      Phone
-                    </p>
-
-                    <div className="mt-3 inline-flex items-center gap-2 text-xl font-black text-[var(--cream)]">
-                      <FaPhone />
-                      503-860-0441
-                    </div>
-                  </a>
+               
 
                   <a
                     href="mailto:Tpindell@gmail.com"

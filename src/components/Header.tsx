@@ -47,13 +47,7 @@ export default function Header() {
             <span className="hidden md:inline">Email</span>
           </a>
 
-          <a
-            href="tel:5038600441"
-            className="inline-flex items-center gap-2 rounded-full border border-[rgba(227,183,111,0.45)] bg-gradient-to-br from-[var(--amber)] to-[var(--amber-soft)] px-4 py-3 text-sm font-black text-[#17120b] shadow-[0_16px_45px_rgba(198,139,69,0.22)] transition hover:-translate-y-0.5 hover:brightness-105"
-          >
-            <FaPhone />
-            <span>503-860-0441</span>
-          </a>
+        
         </div>
 
         <a
