@@ -1,72 +1,72 @@
 import {
-  FaCircleNodes,
-  FaLaptopCode,
+  FaCodeBranch,
+  FaComputer,
   FaScrewdriverWrench,
 } from "react-icons/fa6";
 import FadeIn from "@/components/FadeIn";
 import SectionHeading from "@/components/SectionHeading";
 
-const points = [
+const brandPoints = [
   {
-    icon: FaCircleNodes,
-    title: "Built around clear separation",
-    text: "The site keeps computer repair and air-cooled Volkswagen repair separated into their own paths so visitors can quickly find the right information.",
+    icon: FaCodeBranch,
+    label: "Parent Brand",
+    title: "Arkansas Geek ties both repair paths together",
+    text: "The site keeps the brand simple: practical computer repair as the main service, with air-cooled Volkswagen work shown as its own specialty side.",
   },
   {
-    icon: FaLaptopCode,
-    title: "Content-ready structure",
-    text: "Each section is ready for confirmed business details, including exact services, pricing notes, service area, hours, and repair process information.",
+    icon: FaComputer,
+    label: "Computer Side",
+    title: "Computer repair stays the main focus",
+    text: "The computer repair page is built for hardware-focused repair, troubleshooting questions, future pricing information, and more real computer photos as they are provided.",
   },
   {
     icon: FaScrewdriverWrench,
-    title: "Modern repair-brand direction",
-    text: "The visual style blends old-school tech, workshop energy, and clean modern layout so the brand feels memorable without looking cluttered.",
+    label: "VW Side",
+    title: "VW work is handled case by case",
+    text: "The Volkswagen page gives the air-cooled VW side a proper place while keeping expectations clear: smaller jobs may be reviewed by email, but major rebuilds are not the current focus.",
   },
 ];
 
 export default function WhyArkansasGeek() {
   return (
-    <section className="py-24 md:py-32">
+    <section className="relative overflow-hidden py-24 md:py-32">
+      <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_20%_20%,rgba(198,139,69,0.1),transparent_28rem)]" />
+
       <div className="container-custom">
-        <div className="grid gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">
+        <div className="grid gap-14 lg:grid-cols-[0.42fr_0.58fr] lg:items-start">
           <FadeIn>
             <SectionHeading
-              eyebrow="Brand Direction"
-              title="Old-school repair energy, modern website clarity."
-              text="This direction gives Arkansas Geek personality without making the homepage feel like a random mix of unrelated services."
+              eyebrow="Site Direction"
+              title="One repair-minded brand, without making it confusing."
+              text="Computer repair and air-cooled Volkswagen repair are different audiences, so the site separates them clearly while keeping everything under the Arkansas Geek name."
             />
-
-            <div className="placeholder-note mt-8">
-              Confirmed business details can be added here later. Until then,
-              the site avoids making claims about pricing, turnaround time,
-              service area, years of experience, guarantees, or exact repair
-              services.
-            </div>
           </FadeIn>
 
-          <div className="grid gap-4">
-            {points.map((point, index) => {
+          <div className="border-t border-[var(--line)]">
+            {brandPoints.map((point, index) => {
               const Icon = point.icon;
 
               return (
                 <FadeIn key={point.title} delay={index * 0.08}>
-                  <div className="fresh-panel group relative overflow-hidden p-6 sm:p-7">
-                    <div className="absolute inset-y-0 left-0 w-1 bg-gradient-to-b from-[var(--amber)] via-[var(--blue)] to-[var(--green-soft)] opacity-70" />
-
-                    <div className="flex gap-5">
-                      <div className="grid h-12 w-12 shrink-0 place-items-center rounded-2xl border border-[var(--line)] bg-[rgba(244,239,227,0.055)] text-[var(--amber-soft)]">
+                  <div className="grid gap-5 border-b border-[var(--line)] py-8 md:grid-cols-[0.2fr_0.8fr]">
+                    <div className="flex items-start gap-4 md:block">
+                      <div className="grid h-12 w-12 place-items-center rounded-2xl border border-[var(--line)] bg-[rgba(244,239,227,0.055)] text-[var(--amber-soft)]">
                         <Icon />
                       </div>
 
-                      <div>
-                        <h3 className="font-heading text-2xl font-black tracking-[-0.05em] text-[var(--cream)]">
-                          {point.title}
-                        </h3>
+                      <p className="mt-0 font-mono-custom text-[0.68rem] font-black uppercase tracking-[0.14em] text-[var(--muted)] md:mt-4">
+                        {point.label}
+                      </p>
+                    </div>
 
-                        <p className="mt-3 leading-8 text-[var(--cream-soft)]">
-                          {point.text}
-                        </p>
-                      </div>
+                    <div>
+                      <h3 className="font-heading text-3xl font-black tracking-[-0.06em] text-[var(--cream)] md:text-4xl">
+                        {point.title}
+                      </h3>
+
+                      <p className="mt-4 max-w-2xl leading-8 text-[var(--cream-soft)]">
+                        {point.text}
+                      </p>
                     </div>
                   </div>
                 </FadeIn>

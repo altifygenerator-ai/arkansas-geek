@@ -22,22 +22,22 @@ const heroImages = [
   },
   {
     src: "/images/pc-2.jpg",
-    label: "Diagnostics",
+    label: "Hardware",
     accent: "green",
   },
   {
     src: "/images/bug-2.jpg",
-    label: "Classic Repair",
+    label: "Classic VW",
     accent: "amber",
   },
   {
     src: "/images/pc-3.jpg",
-    label: "Systems",
+    label: "Troubleshooting",
     accent: "blue",
   },
   {
     src: "/images/bug-3.jpg",
-    label: "Volkswagen",
+    label: "Case-by-Case",
     accent: "amber",
   },
 ];
@@ -53,53 +53,56 @@ export default function Hero() {
       </div>
 
       {/* Slanted image strips */}
-<div className="pointer-events-none absolute inset-y-0 right-0 z-0 hidden w-[64%] overflow-hidden lg:block">
-  <motion.div
-    initial={{ opacity: 0, x: 80, rotate: 10 }}
-    animate={{ opacity: 1, x: 0, rotate: 10 }}
-    transition={{ duration: 0.9, ease: "easeOut" }}
-    className="absolute -right-28 -top-28 flex h-[130vh] gap-5"
-  >
-    {heroImages.map((image, index) => (
-      <div
-        key={image.src}
-        className={`relative h-full w-40 overflow-hidden rounded-[2rem] border border-[var(--line)] bg-[var(--bg-muted)] shadow-[var(--shadow-soft)] ${
-          index % 2 === 0 ? "translate-y-14" : "-translate-y-10"
-        }`}
-      >
-<img
-  src={image.src}
-  alt=""
-  className={`h-full w-full object-cover ${
-    image.src.includes("bug") ? "scale-100 object-center" : "scale-105 object-center"
-  }`}
-/>
+      <div className="pointer-events-none absolute inset-y-0 right-0 z-0 hidden w-[64%] overflow-hidden lg:block">
+        <motion.div
+          initial={{ opacity: 0, x: 80, rotate: 10 }}
+          animate={{ opacity: 1, x: 0, rotate: 10 }}
+          transition={{ duration: 0.9, ease: "easeOut" }}
+          className="absolute -right-28 -top-28 flex h-[130vh] gap-5"
+        >
+          {heroImages.map((image, index) => (
+            <div
+              key={image.src}
+              className={`relative h-full w-40 overflow-hidden rounded-[2rem] border border-[var(--line)] bg-[var(--bg-muted)] shadow-[var(--shadow-soft)] ${
+                index % 2 === 0 ? "translate-y-14" : "-translate-y-10"
+              }`}
+            >
+              <img
+                src={image.src}
+                alt=""
+                className={`h-full w-full object-cover ${
+                  image.src.includes("bug")
+                    ? "scale-100 object-center"
+                    : "scale-105 object-center"
+                }`}
+              />
 
-        <div className="absolute inset-0 bg-[rgba(13,17,16,0.24)]" />
-        <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-transparent to-black/70" />
+              <div className="absolute inset-0 bg-[rgba(13,17,16,0.24)]" />
+              <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-transparent to-black/70" />
 
-        <div
-          className={`absolute inset-x-0 bottom-0 h-32 ${
-            image.accent === "blue"
-              ? "bg-gradient-to-t from-[rgba(95,137,168,0.42)] to-transparent"
-              : image.accent === "green"
-                ? "bg-gradient-to-t from-[rgba(156,175,136,0.3)] to-transparent"
-                : "bg-gradient-to-t from-[rgba(198,139,69,0.42)] to-transparent"
-          }`}
-        />
+              <div
+                className={`absolute inset-x-0 bottom-0 h-32 ${
+                  image.accent === "blue"
+                    ? "bg-gradient-to-t from-[rgba(95,137,168,0.42)] to-transparent"
+                    : image.accent === "green"
+                      ? "bg-gradient-to-t from-[rgba(156,175,136,0.3)] to-transparent"
+                      : "bg-gradient-to-t from-[rgba(198,139,69,0.42)] to-transparent"
+                }`}
+              />
 
-        <div className="absolute bottom-5 left-5 right-5 rotate-[-10deg]">
-          <p className="font-mono-custom text-[0.62rem] font-black uppercase tracking-[0.12em] text-[var(--cream)]/90">
-            {image.label}
-          </p>
-        </div>
+              <div className="absolute bottom-5 left-5 right-5 rotate-[-10deg]">
+                <p className="font-mono-custom text-[0.62rem] font-black uppercase tracking-[0.12em] text-[var(--cream)]/90">
+                  {image.label}
+                </p>
+              </div>
+            </div>
+          ))}
+        </motion.div>
+
+        <div className="absolute inset-0 bg-gradient-to-r from-[var(--bg)] via-[rgba(13,17,16,0.42)] to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-b from-[var(--bg)]/35 via-transparent to-[var(--bg)]/75" />
       </div>
-    ))}
-  </motion.div>
 
-  <div className="absolute inset-0 bg-gradient-to-r from-[var(--bg)] via-[rgba(13,17,16,0.42)] to-transparent" />
-  <div className="absolute inset-0 bg-gradient-to-b from-[var(--bg)]/35 via-transparent to-[var(--bg)]/75" />
-</div>
       {/* Mobile abstract panel instead of image strips */}
       <div className="pointer-events-none absolute inset-x-4 top-28 -z-20 h-72 overflow-hidden rounded-[2rem] border border-[var(--line)] bg-[rgba(244,239,227,0.035)] lg:hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-[rgba(198,139,69,0.18)] via-transparent to-[rgba(95,137,168,0.16)]" />
@@ -117,14 +120,14 @@ export default function Hero() {
           <div className="eyebrow">Arkansas Geek</div>
 
           <h1 className="display-title mt-6 max-w-4xl">
-            Computer Repair & Air-Cooled Volkswagen Repair.
+            Computer repair first. Classic VW help when it makes sense.
           </h1>
 
           <p className="lead mt-7">
-            Arkansas Geek is being built as a clear home for two repair paths:
-            computer repair and air-cooled Volkswagen repair. Confirmed service
-            details, pricing notes, and repair information will be added here
-            once provided.
+            Arkansas Geek is built around practical computer repair, with a
+            specialty side for air-cooled Volkswagen work. The computer side
+            focuses on hardware repair and troubleshooting, while VW repair is
+            handled case by case for smaller jobs and maintenance-type work.
           </p>
 
           <div className="mt-9 flex flex-col gap-3 sm:flex-row">
@@ -143,7 +146,7 @@ export default function Hero() {
           </div>
 
           <div className="mt-10 grid gap-3 border-l border-[var(--line-strong)] pl-5">
-            <p className="tech-label">Confirmed Contact</p>
+            <p className="tech-label">Email Contact</p>
             <a
               href="mailto:Tpindell@gmail.com"
               className="text-lg font-bold text-[var(--cream)] transition hover:text-[var(--amber-soft)]"
@@ -165,10 +168,10 @@ export default function Hero() {
               <div className="mb-8 flex items-center justify-between gap-4">
                 <div>
                   <p className="font-mono-custom text-xs font-bold uppercase tracking-[0.16em] text-[var(--green-soft)]">
-                    Service Router
+                    Repair Paths
                   </p>
                   <h2 className="font-heading mt-2 text-3xl font-black tracking-[-0.06em] text-[var(--cream)] sm:text-4xl">
-                    Choose a repair path.
+                    Choose what you need help with.
                   </h2>
                 </div>
 
@@ -192,9 +195,9 @@ export default function Hero() {
                         Computer Repair
                       </h3>
                       <p className="mt-2 leading-7 text-[var(--cream-soft)]">
-                        This page will be updated with confirmed computer repair
-                        services, process details, pricing notes, and service
-                        information.
+                        Hardware-focused computer repair, troubleshooting, and
+                        customer questions. A price list and more computer
+                        repair photos will be added soon.
                       </p>
                     </div>
                   </div>
@@ -214,9 +217,9 @@ export default function Hero() {
                         Air-Cooled Volkswagen Repair
                       </h3>
                       <p className="mt-2 leading-7 text-[var(--cream-soft)]">
-                        This page will be updated with confirmed Volkswagen
-                        repair services, vehicle details, process notes, and
-                        service information.
+                        Air-cooled VW repair is currently handled case by case,
+                        mostly for smaller jobs like brakes, suspension, and
+                        minor repair needs.
                       </p>
                     </div>
                   </div>

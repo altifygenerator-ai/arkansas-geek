@@ -7,19 +7,19 @@ const services = [
   {
     title: "Computer Repair",
     href: "/computer-repair",
-    label: "Repair Path 01",
+    label: "Main Service",
     icon: FaComputer,
     accent: "blue",
-    text: "This section will be updated with the confirmed computer repair services, repair process, pricing notes, and service details for Arkansas Geek.",
+    text: "Hardware-focused computer repair, troubleshooting, and customer questions. A price list and more computer repair photos will be added soon.",
     image: "/images/pc-2.jpg",
   },
   {
     title: "Air-Cooled Volkswagen Repair",
     href: "/air-cooled-volkswagen-repair",
-    label: "Repair Path 02",
+    label: "Specialty Side",
     icon: FaWrench,
     accent: "amber",
-    text: "This section will be updated with the confirmed air-cooled Volkswagen repair services, vehicle details, process notes, and service information for Arkansas Geek.",
+    text: "Air-cooled VW repair is handled case by case, with a focus on smaller repair and maintenance needs rather than major rebuilds or large restoration work.",
     image: "/images/bug-2.jpg",
   },
 ];
@@ -31,8 +31,8 @@ export default function ServiceSplit() {
         <FadeIn>
           <SectionHeading
             eyebrow="Two Repair Paths"
-            title="One brand, two clear directions."
-            text="The homepage is designed to route visitors quickly instead of forcing computer repair and Volkswagen repair into the same generic message."
+            title="One main service, one specialty side."
+            text="Arkansas Geek keeps computer repair front and center while still giving the air-cooled Volkswagen work its own clear place. That way the site feels focused without hiding the VW side."
           />
         </FadeIn>
 

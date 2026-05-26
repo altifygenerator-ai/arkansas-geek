@@ -1,5 +1,7 @@
 import Link from "next/link";
-import { FaEnvelope } from "react-icons/fa6";
+import { FaEnvelope, FaFacebookF } from "react-icons/fa6";
+
+const facebookUrl = "https://www.facebook.com/share/p/18QY3AYYhk/";
 
 export default function Footer() {
   return (
@@ -15,10 +17,9 @@ export default function Footer() {
             </p>
 
             <p className="mt-4 max-w-xl leading-7 text-[var(--cream-soft)]">
-              This website draft is set up for computer repair and air-cooled
-              Volkswagen repair. Additional business details, service
-              descriptions, pricing notes, and service area information will be
-              added once confirmed.
+              Practical computer repair is the main focus, with air-cooled
+              Volkswagen work available on a case-by-case basis for smaller
+              repair and maintenance needs.
             </p>
           </div>
 
@@ -27,13 +28,26 @@ export default function Footer() {
               Contact
             </p>
 
-            <a
-              href="mailto:Tpindell@gmail.com"
-              className="mt-3 inline-flex items-center gap-2 text-lg font-black text-[var(--cream)] transition hover:text-[var(--amber-soft)]"
-            >
-              <FaEnvelope />
-              Tpindell@gmail.com
-            </a>
+            <div className="mt-3 flex flex-wrap gap-3 md:justify-end">
+              <a
+                href="mailto:Tpindell@gmail.com"
+                className="inline-flex items-center gap-2 rounded-full border border-[var(--line-strong)] bg-[rgba(244,239,227,0.055)] px-4 py-3 text-sm font-black text-[var(--cream)] transition hover:border-[var(--amber)]/50 hover:bg-[rgba(198,139,69,0.12)] hover:text-[var(--amber-soft)]"
+              >
+                <FaEnvelope />
+                arkansasgeekadmin@gmail.com
+              </a>
+
+              <a
+                href={facebookUrl}
+                target="_blank"
+                rel="noreferrer"
+                className="inline-flex items-center gap-2 rounded-full border border-[var(--line-strong)] bg-[rgba(244,239,227,0.055)] px-4 py-3 text-sm font-black text-[var(--cream)] transition hover:border-[var(--amber)]/50 hover:bg-[rgba(198,139,69,0.12)] hover:text-[var(--amber-soft)]"
+                aria-label="Visit Arkansas Geek on Facebook"
+              >
+                <FaFacebookF />
+                Facebook
+              </a>
+            </div>
 
             <div className="mt-6 flex flex-wrap gap-4 md:justify-end">
               <Link
@@ -55,7 +69,7 @@ export default function Footer() {
 
         <div className="mt-10 flex flex-col gap-3 border-t border-[var(--line)] pt-6 text-sm text-[var(--muted)] sm:flex-row sm:items-center sm:justify-between">
           <p>© {new Date().getFullYear()} Arkansas Geek. All rights reserved.</p>
-          <p>Computer Repair · Air-Cooled Volkswagen Repair</p>
+          <p>Computer Repair · Case-by-case Air-Cooled VW Work</p>
         </div>
       </div>
     </footer>
