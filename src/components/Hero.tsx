@@ -151,7 +151,7 @@ export default function Hero() {
               href="mailto:Tpindell@gmail.com"
               className="text-lg font-bold text-[var(--cream)] transition hover:text-[var(--amber-soft)]"
             >
-              Tpindell@gmail.com
+              arkansasgeekadmin@gmail.com
             </a>
           </div>
         </motion.div>
