@@ -24,10 +24,10 @@ export default function ContactCTA() {
                 </h2>
 
                 <p className="mt-6 max-w-3xl leading-8 text-[var(--cream-soft)]">
-                  Email Arkansas Geek with what you need help with. Once the
-                  final business details are confirmed, this section can include
-                  a short note about what information to send for computer
-                  repair or air-cooled Volkswagen repair.
+                  Email Arkansas Geek with what you need help with. Labor is
+                  typically $75/hr, but computer and VW jobs can vary a lot, so
+                  send the details first and get a better idea of the work before
+                  anything is scheduled.
                 </p>
 
                 <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:items-center">
@@ -37,7 +37,7 @@ export default function ContactCTA() {
                   </a>
 
                   <p className="font-mono-custom text-xs font-bold uppercase tracking-[0.14em] text-[var(--muted)]">
-                    Email contact only for now
+                    Send details first
                   </p>
                 </div>
               </div>

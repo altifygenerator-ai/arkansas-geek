@@ -11,19 +11,19 @@ const brandPoints = [
     icon: FaCodeBranch,
     label: "Parent Brand",
     title: "Arkansas Geek ties both repair paths together",
-    text: "The site keeps the brand simple: practical computer repair as the main service, with air-cooled Volkswagen work shown as its own specialty side.",
+    text: "Computer repair is the main service, and the air-cooled VW work has its own lane so people can quickly figure out where they need to go.",
   },
   {
     icon: FaComputer,
     label: "Computer Side",
     title: "Computer repair stays the main focus",
-    text: "The computer repair page is built for hardware-focused repair, troubleshooting questions, future pricing information, and more real computer photos as they are provided.",
+    text: "Computer repair covers hardware help, troubleshooting, upgrades, and general repair questions. Labor is typically $75/hr, but the details matter before giving a solid quote.",
   },
   {
     icon: FaScrewdriverWrench,
     label: "VW Side",
     title: "VW work is handled case by case",
-    text: "The Volkswagen page gives the air-cooled VW side a proper place while keeping expectations clear: smaller jobs may be reviewed by email, but major rebuilds are not the current focus.",
+    text: "The VW page keeps expectations clear: smaller air-cooled Volkswagen jobs may be reviewed by email, but major rebuilds and big restoration projects are not the focus right now.",
   },
 ];
 
@@ -38,7 +38,7 @@ export default function WhyArkansasGeek() {
             <SectionHeading
               eyebrow="Site Direction"
               title="One repair-minded brand, without making it confusing."
-              text="Computer repair and air-cooled Volkswagen repair are different audiences, so the site separates them clearly while keeping everything under the Arkansas Geek name."
+              text="Computer repair and air-cooled VW repair are not the same thing, so the site keeps them separated while still making Arkansas Geek feel like one simple repair-minded brand."
             />
           </FadeIn>
 

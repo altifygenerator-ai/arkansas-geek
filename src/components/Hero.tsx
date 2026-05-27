@@ -125,9 +125,9 @@ export default function Hero() {
 
           <p className="lead mt-7">
             Arkansas Geek is built around practical computer repair, with a
-            specialty side for air-cooled Volkswagen work. The computer side
-            focuses on hardware repair and troubleshooting, while VW repair is
-            handled case by case for smaller jobs and maintenance-type work.
+            specialty side for air-cooled Volkswagen work. Labor is typically
+            $75/hr, but every job is different, so the best first step is to
+            reach out with the details and get a better idea before scheduling.
           </p>
 
           <div className="mt-9 flex flex-col gap-3 sm:flex-row">
@@ -195,9 +195,9 @@ export default function Hero() {
                         Computer Repair
                       </h3>
                       <p className="mt-2 leading-7 text-[var(--cream-soft)]">
-                        Hardware-focused computer repair, troubleshooting, and
-                        customer questions. A price list and more computer
-                        repair photos will be added soon.
+                        Computer repair, troubleshooting, upgrades, and hardware
+                        questions. Most work is billed around $75/hr, with a
+                        clearer quote after the issue is looked over.
                       </p>
                     </div>
                   </div>
@@ -217,9 +217,9 @@ export default function Hero() {
                         Air-Cooled Volkswagen Repair
                       </h3>
                       <p className="mt-2 leading-7 text-[var(--cream-soft)]">
-                        Air-cooled VW repair is currently handled case by case,
-                        mostly for smaller jobs like brakes, suspension, and
-                        minor repair needs.
+                        Air-cooled VW repair is handled case by case, mostly for
+                        smaller jobs like brakes, suspension, and minor repair
+                        needs. Send details first for a better quote.
                       </p>
                     </div>
                   </div>

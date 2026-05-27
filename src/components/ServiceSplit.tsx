@@ -10,7 +10,7 @@ const services = [
     label: "Main Service",
     icon: FaComputer,
     accent: "blue",
-    text: "Hardware-focused computer repair, troubleshooting, and customer questions. A price list and more computer repair photos will be added soon.",
+    text: "Computer repair, troubleshooting, upgrades, and hardware help. Labor is typically $75/hr, but it is best to reach out with details first so the job can be quoted fairly.",
     image: "/images/pc-2.jpg",
   },
   {
@@ -19,7 +19,7 @@ const services = [
     label: "Specialty Side",
     icon: FaWrench,
     accent: "amber",
-    text: "Air-cooled VW repair is handled case by case, with a focus on smaller repair and maintenance needs rather than major rebuilds or large restoration work.",
+    text: "Air-cooled VW work is handled case by case, mostly for smaller repair and maintenance needs. Labor is typically $75/hr, with a better quote after the vehicle details are reviewed.",
     image: "/images/bug-2.jpg",
   },
 ];
@@ -32,7 +32,7 @@ export default function ServiceSplit() {
           <SectionHeading
             eyebrow="Two Repair Paths"
             title="One main service, one specialty side."
-            text="Arkansas Geek keeps computer repair front and center while still giving the air-cooled Volkswagen work its own clear place. That way the site feels focused without hiding the VW side."
+            text="Arkansas Geek keeps computer repair front and center while still giving the air-cooled Volkswagen side its own place. Both start the same way: send the details first, then get a clearer idea of cost and next steps."
           />
         </FadeIn>
 

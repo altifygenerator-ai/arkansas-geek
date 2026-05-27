@@ -7,31 +7,78 @@ import Footer from "@/components/Footer";
 export const metadata: Metadata = {
   title: "Computer Repair",
   description:
-    "Hardware-focused computer repair and troubleshooting through Arkansas Geek. Price list and additional computer repair photos coming soon.",
+    "Computer repair, troubleshooting, upgrades, hardware help, and repair questions through Arkansas Geek. Labor is typically $75/hr, with quotes based on the job details.",
+  alternates: {
+    canonical: "/computer-repair",
+  },
+  openGraph: {
+    title: "Computer Repair | Arkansas Geek",
+    description:
+      "Computer repair, troubleshooting, upgrades, hardware help, and repair questions. Labor is typically $75/hr, with quotes based on the job details.",
+    url: "https://arkansasgeek.com/computer-repair",
+    type: "website",
+    images: [
+      {
+        url: "/images/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Arkansas Geek computer repair",
+      },
+    ],
+  },
+};
+const computerRepairSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  name: "Computer Repair",
+  serviceType: "Computer repair",
+  provider: {
+    "@type": "LocalBusiness",
+    name: "Arkansas Geek",
+    url: "https://arkansasgeek.com",
+    email: "arkansasgeekadmin@gmail.com",
+  },
+  areaServed: {
+    "@type": "State",
+    name: "Arkansas",
+  },
+  description:
+    "Computer repair, troubleshooting, upgrades, hardware help, builds, and repair questions. Labor is typically $75/hr, with quotes based on the job details.",
+  offers: {
+    "@type": "Offer",
+    priceSpecification: {
+      "@type": "UnitPriceSpecification",
+      price: 75,
+      priceCurrency: "USD",
+      unitText: "HOUR",
+    },
+    description:
+      "Labor is typically $75/hr. Final cost depends on the computer, issue, parts needed, and job details.",
+  },
 };
 
 const statusItems = [
   { label: "Page Type", value: "Computer Repair" },
   { label: "Focus", value: "Hardware Repair & Troubleshooting" },
-  { label: "Pricing", value: "Price List Coming Soon" },
-  { label: "Contact", value: "Email Only For Now" },
+  { label: "Rate", value: "$75/hr Labor" },
+  { label: "Quote", value: "Send Details First" },
 ];
 
 const intakeRows = [
   {
     number: "01",
     title: "Hardware-focused computer repair",
-    text: "Arkansas Geek handles computer repair with a focus on hardware-related issues, troubleshooting, builds, replacement parts, upgrades, and general repair questions. A more detailed service list can be added as the final price list and repair categories are provided.",
+    text: "Arkansas Geek handles practical computer repair, hardware issues, troubleshooting, upgrades, replacement parts, builds, and general repair questions. Labor is typically $75/hr, but the final cost depends on what is actually going on with the machine.",
   },
   {
     number: "02",
     title: "What to include when you reach out",
-    text: "When emailing about a computer issue, include the type of computer, what problem you are having, when it started, any error messages or symptoms, and whether anything was recently changed, upgraded, or replaced.",
+    text: "When you reach out, include the type of computer, what it is doing, when it started, any error messages, and whether anything was recently changed, upgraded, dropped, unplugged, or replaced. A few clear details up front make the quote a lot easier.",
   },
   {
     number: "03",
     title: "Pricing and photos coming soon",
-    text: "A full price list and more computer repair photos will be added soon. Until then, email is the best way to start the conversation and explain what is going on with the machine.",
+    text: "The usual labor rate is $75/hr, but every job is different. Some fixes are quick, some need parts, and some need more troubleshooting before there is a solid answer, so it is best to ask first instead of guessing from a flat price.",
   },
 ];
 
@@ -41,6 +88,12 @@ export default function ComputerRepairPage() {
       <Header />
 
       <main>
+<script
+  type="application/ld+json"
+  dangerouslySetInnerHTML={{
+    __html: JSON.stringify(computerRepairSchema),
+  }}
+/>
         <section className="relative min-h-screen overflow-hidden pt-32">
           <div className="absolute inset-0 -z-30">
             <div className="absolute inset-0 diagnostic-grid opacity-70" />
@@ -60,10 +113,10 @@ export default function ComputerRepairPage() {
 
                 <p className="lead mt-7">
                   Arkansas Geek offers computer repair and troubleshooting with
-                  a focus on hardware-related issues. A full price list and more
-                  computer repair photos will be added soon, but customers can
-                  already reach out by email with the computer issue and basic
-                  details.
+                  a focus on hardware-related issues, upgrades, builds, and
+                  repair questions. Labor is typically $75/hr, but the best move
+                  is to send the details first so the job can be quoted more
+                  fairly.
                 </p>
 
                 <div className="mt-9 flex flex-col gap-3 sm:flex-row">
@@ -132,7 +185,7 @@ export default function ComputerRepairPage() {
                       </p>
 
                       <p className="text-[var(--cream-soft)]">
-                        pricing: full price list coming soon
+                        rate: $75/hr labor, quote depends on the job
                       </p>
 
                       <p className="text-[var(--page-accent-soft)]">
@@ -167,7 +220,7 @@ export default function ComputerRepairPage() {
                   </p>
 
                   <p className="mt-1 font-heading text-xl font-black tracking-[-0.04em] text-[var(--cream)]">
-                    Price list coming soon
+                    $75/hr labor
                   </p>
                 </div>
               </div>
@@ -217,13 +270,13 @@ export default function ComputerRepairPage() {
 
               <div className="absolute bottom-6 left-6 max-w-2xl pr-6">
                 <h2 className="font-heading text-4xl font-black tracking-[-0.06em] text-[var(--cream)] md:text-5xl">
-                  More real computer repair photos will be added soon.
+                  Real repair photos can be added as the computer side grows.
                 </h2>
 
                 <p className="mt-4 max-w-xl leading-8 text-[var(--cream-soft)]">
-                  This area can feature computer builds, hardware repair photos,
-                  workbench images, or close-up shots that help customers see
-                  the computer repair side of Arkansas Geek.
+                  This area can be used for real computer builds, workbench photos,
+                  hardware repairs, upgrades, or before-and-after shots as more
+                  repair photos are gathered.
                 </p>
               </div>
             </div>
@@ -243,7 +296,8 @@ export default function ComputerRepairPage() {
                 <p className="lead mt-6">
                   The more detail you send up front, the easier it is to point
                   the repair in the right direction. Start with the issue, the
-                  computer type, and anything that changed recently.
+                  computer type, and anything that changed recently so the quote
+                  is not just a guess.
                 </p>
 
                 <a
@@ -267,8 +321,8 @@ export default function ComputerRepairPage() {
                     </p>
 
                     <p className="mt-2 leading-7 text-[var(--cream-soft)]">
-                      More computer photos and the final price list will be
-                      added as they are provided.
+                      Most labor is $75/hr, but the job details decide what the
+                      repair actually needs.
                     </p>
                   </div>
                 </div>
@@ -320,7 +374,8 @@ export default function ComputerRepairPage() {
                   <p className="max-w-2xl leading-8 text-[var(--cream-soft)]">
                     For computer repair, email Arkansas Geek with the type of
                     computer, the issue you are having, and the best way to
-                    follow up. A full price list will be added once it is ready.
+                    follow up. Labor is typically $75/hr, but every job is
+                    different, so send the details first for a better quote.
                   </p>
 
                   <a
