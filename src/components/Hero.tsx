@@ -148,7 +148,7 @@ export default function Hero() {
           <div className="mt-10 grid gap-3 border-l border-[var(--line-strong)] pl-5">
             <p className="tech-label">Email Contact</p>
             <a
-              href="mailto:Tpindell@gmail.com"
+              href="mailto:arkansasgeekadminl@gmail.com"
               className="text-lg font-bold text-[var(--cream)] transition hover:text-[var(--amber-soft)]"
             >
               arkansasgeekadmin@gmail.com

@@ -30,7 +30,7 @@ export default function Footer() {
 
             <div className="mt-3 flex flex-wrap gap-3 md:justify-end">
               <a
-                href="mailto:Tpindell@gmail.com"
+                href="mailto:arkansasgeekadmin@gmail.com"
                 className="inline-flex items-center gap-2 rounded-full border border-[var(--line-strong)] bg-[rgba(244,239,227,0.055)] px-4 py-3 text-sm font-black text-[var(--cream)] transition hover:border-[var(--amber)]/50 hover:bg-[rgba(198,139,69,0.12)] hover:text-[var(--amber-soft)]"
               >
                 <FaEnvelope />
