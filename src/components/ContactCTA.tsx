@@ -25,7 +25,7 @@ export default function ContactCTA() {
 
                 <p className="mt-6 max-w-3xl leading-8 text-[var(--cream-soft)]">
                   Email Arkansas Geek with what you need help with. Labor is
-                  typically $75/hr, but computer and VW jobs can vary a lot, so
+                  typically $55/hr, but computer and VW jobs can vary a lot, so
                   send the details first and get a better idea of the work before
                   anything is scheduled.
                 </p>

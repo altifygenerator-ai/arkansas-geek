@@ -17,7 +17,7 @@ const brandPoints = [
     icon: FaComputer,
     label: "Computer Side",
     title: "Computer repair stays the main focus",
-    text: "Computer repair covers hardware help, troubleshooting, upgrades, and general repair questions. Labor is typically $75/hr, but the details matter before giving a solid quote.",
+    text: "Computer repair covers hardware help, troubleshooting, upgrades, and general repair questions. Labor is typically $55/hr, but the details matter before giving a solid quote.",
   },
   {
     icon: FaScrewdriverWrench,

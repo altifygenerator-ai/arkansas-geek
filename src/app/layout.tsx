@@ -12,7 +12,7 @@ export const metadata: Metadata = {
   },
 
   description:
-    "Arkansas Geek provides computer repair, PC troubleshooting, hardware upgrades, and air-cooled Volkswagen repair help for Hot Springs, Malvern, Arkadelphia, and surrounding Arkansas areas. Labor is typically $75/hr, with quotes based on each job.",
+    "Arkansas Geek provides computer repair, PC troubleshooting, hardware upgrades, and air-cooled Volkswagen repair help for Hot Springs, Malvern, Arkadelphia, and surrounding Arkansas areas. Labor is typically $55/hr, with quotes based on each job.",
 
   keywords: [
     "Arkansas Geek",

@@ -7,14 +7,14 @@ import Footer from "@/components/Footer";
 export const metadata: Metadata = {
   title: "Air-Cooled Volkswagen Repair",
   description:
-    "Air-cooled Volkswagen repair help through Arkansas Geek. Labor is typically $75/hr, with quotes based on the vehicle and job details.",
+    "Air-cooled Volkswagen repair help through Arkansas Geek. Labor is typically $55/hr, with quotes based on the vehicle and job details.",
   alternates: {
     canonical: "/air-cooled-volkswagen-repair",
   },
   openGraph: {
     title: "Air-Cooled Volkswagen Repair | Arkansas Geek",
     description:
-      "Case-by-case air-cooled Volkswagen repair help. Labor is typically $75/hr, with quotes based on the vehicle and job details.",
+      "Case-by-case air-cooled Volkswagen repair help. Labor is typically $55/hr, with quotes based on the vehicle and job details.",
     url: "https://arkansasgeek.com/air-cooled-volkswagen-repair",
     type: "website",
     images: [
@@ -43,17 +43,17 @@ const volkswagenRepairSchema = {
     name: "Arkansas",
   },
   description:
-    "Case-by-case air-cooled Volkswagen repair help for smaller jobs, minor repair needs, brake-related work, suspension-related work, and maintenance-type questions. Labor is typically $75/hr, with quotes based on the vehicle and job details.",
+    "Case-by-case air-cooled Volkswagen repair help for smaller jobs, minor repair needs, brake-related work, suspension-related work, and maintenance-type questions. Labor is typically $55/hr, with quotes based on the vehicle and job details.",
   offers: {
     "@type": "Offer",
     priceSpecification: {
       "@type": "UnitPriceSpecification",
-      price: 75,
+      price: 55,
       priceCurrency: "USD",
       unitText: "HOUR",
     },
     description:
-      "Labor is typically $75/hr. Final cost depends on the vehicle, issue, parts needed, and job details.",
+      "Labor is typically $55/hr. Final cost depends on the vehicle, issue, parts needed, and job details.",
   },
 };
 
@@ -61,7 +61,7 @@ const infoBlocks = [
   {
     label: "01 / Case-by-case",
     title: "Air-cooled VW work is handled case by case.",
-    text: "This side of Arkansas Geek is best started by email. Send the vehicle details, what is going on, and what you are hoping to have looked at. Labor is typically $75/hr, but the job needs to be reviewed before giving a better quote.",
+    text: "This side of Arkansas Geek is best started by email. Send the vehicle details, what is going on, and what you are hoping to have looked at. Labor is typically $55/hr, but the job needs to be reviewed before giving a better quote.",
   },
   {
     label: "02 / Smaller repair work",
@@ -110,7 +110,7 @@ export default function AirCooledVolkswagenRepairPage() {
                 <p className="lead mt-7">
                   The Volkswagen side of Arkansas Geek is a specialty lane for
                   air-cooled VW questions and smaller repair needs. Labor is
-                  typically $75/hr, but VW work is reviewed case by case so the
+                  typically $55/hr, but VW work is reviewed case by case so the
                   quote matches the actual job.
                 </p>
 
@@ -185,7 +185,7 @@ export default function AirCooledVolkswagenRepairPage() {
                   VW repair is reviewed case by case. Good fit examples may
                   include minor repair needs, brake or suspension-related
                   questions, and smaller maintenance-type work. Labor is
-                  typically $75/hr, but details matter before giving a solid
+                  typically $55/hr, but details matter before giving a solid
                   quote.
                 </p>
               </div>
@@ -205,7 +205,7 @@ export default function AirCooledVolkswagenRepairPage() {
                     Rate
                   </p>
                   <p className="text-2xl font-black tracking-[-0.03em] text-[var(--cream)]">
-                    Typically $75/hr labor, with a better quote after details
+                    Typically $55/hr labor, with a better quote after details
                   </p>
                 </div>
 
@@ -325,7 +325,7 @@ export default function AirCooledVolkswagenRepairPage() {
 
                 <p className="mt-6 max-w-2xl leading-8 text-[var(--cream-soft)]">
                   Send the year, model, issue, photos if helpful, and what you
-                  are hoping to have looked at. Labor is typically $75/hr, but
+                  are hoping to have looked at. Labor is typically $55/hr, but
                   Volkswagen repair is reviewed case by case before giving a
                   better quote.
                 </p>

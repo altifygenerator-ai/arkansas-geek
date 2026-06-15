@@ -126,7 +126,7 @@ export default function Hero() {
           <p className="lead mt-7">
             Arkansas Geek is built around practical computer repair, with a
             specialty side for air-cooled Volkswagen work. Labor is typically
-            $75/hr, but every job is different, so the best first step is to
+            $55/hr, but every job is different, so the best first step is to
             reach out with the details and get a better idea before scheduling.
           </p>
 
@@ -196,7 +196,7 @@ export default function Hero() {
                       </h3>
                       <p className="mt-2 leading-7 text-[var(--cream-soft)]">
                         Computer repair, troubleshooting, upgrades, and hardware
-                        questions. Most work is billed around $75/hr, with a
+                        questions. Most work is billed around $55/hr, with a
                         clearer quote after the issue is looked over.
                       </p>
                     </div>
