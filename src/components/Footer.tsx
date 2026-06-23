@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { FaEnvelope, FaFacebookF } from "react-icons/fa6";
 
-const facebookUrl = "https://www.facebook.com/share/p/18QY3AYYhk/";
+const facebookUrl = "https://www.facebook.com/share/1BCnj1ZdVn/?mibextid=wwXIfr";
 
 export default function Footer() {
   return (
@@ -17,9 +17,9 @@ export default function Footer() {
             </p>
 
             <p className="mt-4 max-w-xl leading-7 text-[var(--cream-soft)]">
-              Practical computer repair is the main focus, with air-cooled
-              Volkswagen work available on a case-by-case basis for smaller
-              repair and maintenance needs.
+              Computer repair backed by real IT troubleshooting experience, with
+              air-cooled Volkswagen work handled case by case for smaller repair
+              and maintenance needs.
             </p>
           </div>
 
@@ -29,13 +29,13 @@ export default function Footer() {
             </p>
 
             <div className="mt-3 flex flex-wrap gap-3 md:justify-end">
-              <a
-                href="mailto:arkansasgeekadmin@gmail.com"
+              <Link
+                href="/repair-request"
                 className="inline-flex items-center gap-2 rounded-full border border-[var(--line-strong)] bg-[rgba(244,239,227,0.055)] px-4 py-3 text-sm font-black text-[var(--cream)] transition hover:border-[var(--amber)]/50 hover:bg-[rgba(198,139,69,0.12)] hover:text-[var(--amber-soft)]"
               >
                 <FaEnvelope />
-                arkansasgeekadmin@gmail.com
-              </a>
+                Repair Request
+              </Link>
 
               <a
                 href={facebookUrl}
@@ -63,6 +63,13 @@ export default function Footer() {
               >
                 Air-Cooled VW
               </Link>
+
+              <a
+                href="mailto:arkansasgeekadmin@gmail.com"
+                className="font-mono-custom text-xs font-bold uppercase tracking-[0.12em] text-[var(--cream-soft)] transition hover:text-[var(--amber-soft)]"
+              >
+                Email
+              </a>
             </div>
           </div>
         </div>

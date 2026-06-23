@@ -9,21 +9,21 @@ import SectionHeading from "@/components/SectionHeading";
 const brandPoints = [
   {
     icon: FaCodeBranch,
-    label: "Parent Brand",
-    title: "Arkansas Geek ties both repair paths together",
-    text: "Computer repair is the main service, and the air-cooled VW work has its own lane so people can quickly figure out where they need to go.",
+    label: "Clear Direction",
+    title: "Straight answers before unnecessary work",
+    text: "Arkansas Geek starts by understanding what you have, what is going wrong, and what you actually need done. The goal is to narrow the issue down before recommending a repair.",
   },
   {
     icon: FaComputer,
-    label: "Computer Side",
-    title: "Computer repair stays the main focus",
-    text: "Computer repair covers hardware help, troubleshooting, upgrades, and general repair questions. Labor is typically $55/hr, but the details matter before giving a solid quote.",
+    label: "Computer Repair",
+    title: "Practical help for computer problems",
+    text: "From hardware issues and troubleshooting to upgrades, builds, and general repair questions, the computer side is focused on figuring out the problem and helping you take the next right step.",
   },
   {
     icon: FaScrewdriverWrench,
-    label: "VW Side",
-    title: "VW work is handled case by case",
-    text: "The VW page keeps expectations clear: smaller air-cooled Volkswagen jobs may be reviewed by email, but major rebuilds and big restoration projects are not the focus right now.",
+    label: "Air-Cooled VW",
+    title: "Classic VW work handled honestly",
+    text: "Air-cooled Volkswagen repair is reviewed case by case. Smaller jobs like brakes, suspension, and minor repair needs may be a good fit, while major rebuilds are not the focus right now.",
   },
 ];
 
@@ -37,8 +37,8 @@ export default function WhyArkansasGeek() {
           <FadeIn>
             <SectionHeading
               eyebrow="Site Direction"
-              title="One repair-minded brand, without making it confusing."
-              text="Computer repair and air-cooled VW repair are not the same thing, so the site keeps them separated while still making Arkansas Geek feel like one simple repair-minded brand."
+              title="Repair help without making the site confusing."
+              text="Computer repair and air-cooled Volkswagen repair are different audiences, so the site separates them clearly while keeping everything under the Arkansas Geek name."
             />
           </FadeIn>
 

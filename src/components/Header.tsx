@@ -6,6 +6,7 @@ const facebookUrl = "https://www.facebook.com/share/1BCnj1ZdVn/?mibextid=wwXIfr"
 const navItems = [
   { label: "Computer Repair", href: "/computer-repair" },
   { label: "Air-Cooled VW", href: "/air-cooled-volkswagen-repair" },
+  { label: "Request Help", href: "/repair-request" },
   { label: "Contact", href: "#contact" },
 ];
 
@@ -51,13 +52,12 @@ export default function Header() {
             <FaFacebookF />
           </a>
 
-          <a
-            href="mailto:arkansasgeekadmin@gmail.com"
+          <Link
+            href="/repair-request"
             className="inline-flex items-center gap-2 rounded-full border border-[var(--line-strong)] bg-[rgba(244,239,227,0.055)] px-4 py-3 text-sm font-extrabold text-[var(--cream)] transition hover:-translate-y-0.5 hover:border-[var(--amber)]/50 hover:bg-[rgba(198,139,69,0.12)]"
           >
-            <FaEnvelope className="text-[var(--amber-soft)]" />
-            <span className="hidden md:inline">Email</span>
-          </a>
+            Request Help
+          </Link>
         </div>
 
         <div className="flex items-center gap-2 sm:hidden">
@@ -71,13 +71,13 @@ export default function Header() {
             <FaFacebookF />
           </a>
 
-          <a
-            href="mailto:arkansasgeekadmin@gmail.com"
+          <Link
+            href="/repair-request"
             className="grid h-11 w-11 place-items-center rounded-full border border-[rgba(227,183,111,0.45)] bg-gradient-to-br from-[var(--amber)] to-[var(--amber-soft)] text-[#17120b] shadow-[0_16px_45px_rgba(198,139,69,0.22)]"
-            aria-label="Email Arkansas Geek"
+            aria-label="Start a repair request"
           >
             <FaEnvelope />
-          </a>
+          </Link>
         </div>
       </div>
     </header>

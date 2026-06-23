@@ -7,31 +7,13 @@ import Footer from "@/components/Footer";
 export const metadata: Metadata = {
   title: "Air-Cooled Volkswagen Repair",
   description:
-    "Air-cooled Volkswagen repair help through Arkansas Geek. Labor is typically $55/hr, with quotes based on the vehicle and job details.",
-  alternates: {
-    canonical: "/air-cooled-volkswagen-repair",
-  },
-  openGraph: {
-    title: "Air-Cooled Volkswagen Repair | Arkansas Geek",
-    description:
-      "Case-by-case air-cooled Volkswagen repair help. Labor is typically $55/hr, with quotes based on the vehicle and job details.",
-    url: "https://arkansasgeek.com/air-cooled-volkswagen-repair",
-    type: "website",
-    images: [
-      {
-        url: "/images/og-image.jpg",
-        width: 1200,
-        height: 630,
-        alt: "Arkansas Geek air-cooled Volkswagen repair",
-      },
-    ],
-  },
+    "Case-by-case air-cooled Volkswagen repair through Arkansas Geek, focused on smaller jobs, minor repair needs, brakes, suspension, and maintenance-type work.",
 };
+
 const volkswagenRepairSchema = {
   "@context": "https://schema.org",
   "@type": "Service",
   name: "Air-Cooled Volkswagen Repair",
-  serviceType: "Air-cooled Volkswagen repair",
   provider: {
     "@type": "LocalBusiness",
     name: "Arkansas Geek",
@@ -43,7 +25,7 @@ const volkswagenRepairSchema = {
     name: "Arkansas",
   },
   description:
-    "Case-by-case air-cooled Volkswagen repair help for smaller jobs, minor repair needs, brake-related work, suspension-related work, and maintenance-type questions. Labor is typically $55/hr, with quotes based on the vehicle and job details.",
+    "Case-by-case air-cooled Volkswagen repair help for smaller jobs, minor repair needs, brake-related work, suspension-related work, and maintenance-type questions. Major rebuilds and large restoration work are not the current focus.",
   offers: {
     "@type": "Offer",
     priceSpecification: {
@@ -60,8 +42,8 @@ const volkswagenRepairSchema = {
 const infoBlocks = [
   {
     label: "01 / Case-by-case",
-    title: "Air-cooled VW work is handled case by case.",
-    text: "This side of Arkansas Geek is best started by email. Send the vehicle details, what is going on, and what you are hoping to have looked at. Labor is typically $55/hr, but the job needs to be reviewed before giving a better quote.",
+    title: "Air-cooled VW work is reviewed case by case.",
+    text: "This side of Arkansas Geek is best started with the repair form. Send the year, model, what is going on, whether it runs, and what you are hoping to have looked at before anything is promised.",
   },
   {
     label: "02 / Smaller repair work",
@@ -71,7 +53,7 @@ const infoBlocks = [
   {
     label: "03 / What to send",
     title: "Start with the basic VW details.",
-    text: "Include the year, model, current issue, whether the vehicle runs, any recent work done, and photos if they help explain the problem. The more context you send, the easier it is to know if the job makes sense and what it may take.",
+    text: "Include the year, model, current issue, whether the vehicle runs, any recent work done, and photos if they help explain the problem. The more context you send, the easier it is to know if the job makes sense.",
   },
 ];
 
@@ -82,11 +64,11 @@ export default function AirCooledVolkswagenRepairPage() {
 
       <main>
         <script
-  type="application/ld+json"
-  dangerouslySetInnerHTML={{
-    __html: JSON.stringify(volkswagenRepairSchema),
-  }}
-/>
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(volkswagenRepairSchema),
+          }}
+        />
         <section className="relative min-h-screen overflow-hidden">
           <img
             src="/images/bug-1.jpg"
@@ -109,21 +91,21 @@ export default function AirCooledVolkswagenRepairPage() {
 
                 <p className="lead mt-7">
                   The Volkswagen side of Arkansas Geek is a specialty lane for
-                  air-cooled VW questions and smaller repair needs. Labor is
-                  typically $55/hr, but VW work is reviewed case by case so the
-                  quote matches the actual job.
+                  air-cooled VW questions and smaller repair needs. VW work is
+                  reviewed case by case, with the focus on minor repairs,
+                  brakes, suspension, and maintenance-type jobs.
                 </p>
 
                 <div className="mt-9 flex flex-col gap-3 sm:flex-row">
-                  <a href="mailto:arkansasgeekadmin@gmail.com" className="btn-primary">
+                  <Link href="/repair-request" className="btn-primary">
+                    Start a VW Repair Request
+                    <FaArrowRight />
+                  </Link>
+
+                  <a href="mailto:arkansasgeekadmin@gmail.com" className="btn-secondary">
                     Email About VW Repair
                     <FaEnvelope />
                   </a>
-
-                  <Link href="/" className="btn-secondary">
-                    Back to Home
-                    <FaArrowRight />
-                  </Link>
                 </div>
               </div>
 
@@ -178,15 +160,15 @@ export default function AirCooledVolkswagenRepairPage() {
                 </p>
 
                 <h2 className="font-heading mt-4 text-5xl font-black tracking-[-0.065em] text-[var(--cream)] md:text-6xl">
-                  Smaller air-cooled VW work can start with an email.
+                  Smaller air-cooled VW work can start with the form.
                 </h2>
 
                 <p className="mt-6 leading-8 text-[var(--cream-soft)]">
                   VW repair is reviewed case by case. Good fit examples may
                   include minor repair needs, brake or suspension-related
-                  questions, and smaller maintenance-type work. Labor is
-                  typically $55/hr, but details matter before giving a solid
-                  quote.
+                  questions, and smaller maintenance-type work. Major engine
+                  rebuilds or large restoration work are not the focus at this
+                  time.
                 </p>
               </div>
 
@@ -196,7 +178,7 @@ export default function AirCooledVolkswagenRepairPage() {
                     Contact method
                   </p>
                   <p className="text-2xl font-black tracking-[-0.03em] text-[var(--cream)]">
-                    Email first with vehicle details
+                    Send the form first with vehicle details
                   </p>
                 </div>
 
@@ -243,7 +225,7 @@ export default function AirCooledVolkswagenRepairPage() {
               <p className="lead mt-6">
                 This side is intentionally more case-by-case. Send the vehicle
                 details first, and Arkansas Geek can review whether the job is a
-                good fit and give a more realistic idea of cost.
+                good fit.
               </p>
             </div>
 
@@ -316,24 +298,23 @@ export default function AirCooledVolkswagenRepairPage() {
 
               <div>
                 <p className="font-mono-custom text-xs font-black uppercase tracking-[0.16em] text-[var(--page-accent-soft)]">
-                  Email contact
+                  Repair request
                 </p>
 
                 <h2 className="font-heading mt-4 max-w-4xl text-5xl font-black tracking-[-0.065em] text-[var(--cream)] md:text-7xl">
-                  Ask about VW work by email.
+                  Ask about VW work with the form.
                 </h2>
 
                 <p className="mt-6 max-w-2xl leading-8 text-[var(--cream-soft)]">
                   Send the year, model, issue, photos if helpful, and what you
-                  are hoping to have looked at. Labor is typically $55/hr, but
-                  Volkswagen repair is reviewed case by case before giving a
-                  better quote.
+                  are hoping to have looked at. Volkswagen repair is currently
+                  reviewed case by case.
                 </p>
 
-                <a href="mailto:arkansasgeekadmin@gmail.com" className="btn-primary mt-8">
-                  arkansasgeekadmin@gmail.com
-                  <FaEnvelope />
-                </a>
+                <Link href="/repair-request" className="btn-primary mt-8">
+                  Start VW Repair Request
+                  <FaArrowRight />
+                </Link>
               </div>
             </div>
           </div>

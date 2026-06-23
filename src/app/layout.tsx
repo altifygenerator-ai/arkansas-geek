@@ -7,35 +7,33 @@ export const metadata: Metadata = {
 
   title: {
     default:
-      "Arkansas Geek | Computer Repair & Air-Cooled VW Repair Near Hot Springs & Malvern",
+      "Arkansas Geek | Computer Repair & Air-Cooled VW Help in Arkansas",
     template: "%s | Arkansas Geek",
   },
 
   description:
-    "Arkansas Geek provides computer repair, PC troubleshooting, hardware upgrades, and air-cooled Volkswagen repair help for Hot Springs, Malvern, Arkadelphia, and surrounding Arkansas areas. Labor is typically $55/hr, with quotes based on each job.",
+    "Arkansas Geek provides computer repair, hardware troubleshooting, repair request intake, and case-by-case air-cooled Volkswagen help for smaller jobs and maintenance-type work in Arkansas.",
 
   keywords: [
     "Arkansas Geek",
+    "computer repair Arkansas",
     "computer repair Hot Springs AR",
     "computer repair Malvern AR",
     "PC repair Hot Springs Arkansas",
     "PC repair Malvern Arkansas",
-    "computer troubleshooting Hot Springs",
-    "computer troubleshooting Malvern",
-    "laptop repair Hot Springs AR",
-    "desktop repair Hot Springs AR",
-    "hardware upgrades Arkansas",
+    "computer troubleshooting Arkansas",
+    "hardware repair Arkansas",
     "computer upgrades Arkansas",
-    "virus removal Arkansas",
+    "desktop repair Arkansas",
+    "laptop repair Arkansas",
+    "remote computer troubleshooting Arkansas",
+    "repair request Arkansas Geek",
     "air cooled Volkswagen repair Arkansas",
-    "air cooled VW repair Hot Springs",
-    "air cooled VW repair Malvern",
-    "Volkswagen Beetle repair Arkansas",
+    "air cooled VW repair Arkansas",
     "classic VW repair Arkansas",
-    "VW repair Hot Springs AR",
-    "VW repair Malvern AR",
+    "VW brake repair Arkansas",
+    "VW suspension repair Arkansas",
     "computer repair Arkadelphia AR",
-    "VW repair Arkadelphia AR",
   ],
 
   authors: [{ name: "Arkansas Geek" }],
@@ -55,10 +53,9 @@ export const metadata: Metadata = {
     locale: "en_US",
     url: "https://arkansasgeek.com",
     siteName: "Arkansas Geek",
-    title:
-      "Arkansas Geek | Computer Repair & Air-Cooled VW Repair Near Hot Springs & Malvern",
+    title: "Arkansas Geek | Computer Repair & Air-Cooled VW Help in Arkansas",
     description:
-      "Computer repair, PC troubleshooting, hardware upgrades, and air-cooled Volkswagen repair help for Hot Springs, Malvern, Arkadelphia, and surrounding Arkansas areas.",
+      "Computer repair, hardware troubleshooting, repair request intake, and case-by-case air-cooled Volkswagen help for smaller jobs and maintenance-type work.",
     images: [
       {
         url: "/images/pc-1.jpg",
@@ -71,10 +68,9 @@ export const metadata: Metadata = {
 
   twitter: {
     card: "summary_large_image",
-    title:
-      "Arkansas Geek | Computer Repair & Air-Cooled VW Repair Near Hot Springs & Malvern",
+    title: "Arkansas Geek | Computer Repair & Air-Cooled VW Help in Arkansas",
     description:
-      "Computer repair, PC troubleshooting, hardware upgrades, and air-cooled Volkswagen repair help for Hot Springs, Malvern, Arkadelphia, and surrounding Arkansas areas.",
+      "Computer repair, hardware troubleshooting, repair request intake, and case-by-case air-cooled Volkswagen help for smaller jobs.",
     images: ["/images/pc-1.jpg"],
   },
 

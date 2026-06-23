@@ -7,31 +7,13 @@ import Footer from "@/components/Footer";
 export const metadata: Metadata = {
   title: "Computer Repair",
   description:
-    "Computer repair, troubleshooting, upgrades, hardware help, and repair questions through Arkansas Geek. Labor is typically $55/hr, with quotes based on the job details.",
-  alternates: {
-    canonical: "/computer-repair",
-  },
-  openGraph: {
-    title: "Computer Repair | Arkansas Geek",
-    description:
-      "Computer repair, troubleshooting, upgrades, hardware help, and repair questions. Labor is typically $55/hr, with quotes based on the job details.",
-    url: "https://arkansasgeek.com/computer-repair",
-    type: "website",
-    images: [
-      {
-        url: "/images/og-image.jpg",
-        width: 1200,
-        height: 630,
-        alt: "Arkansas Geek computer repair",
-      },
-    ],
-  },
+    "Hardware-focused computer repair, troubleshooting, upgrades, builds, and repair request intake through Arkansas Geek.",
 };
+
 const computerRepairSchema = {
   "@context": "https://schema.org",
   "@type": "Service",
   name: "Computer Repair",
-  serviceType: "Computer repair",
   provider: {
     "@type": "LocalBusiness",
     name: "Arkansas Geek",
@@ -43,7 +25,7 @@ const computerRepairSchema = {
     name: "Arkansas",
   },
   description:
-    "Computer repair, troubleshooting, upgrades, hardware help, builds, and repair questions. Labor is typically $55/hr, with quotes based on the job details.",
+    "Hardware-focused computer repair, troubleshooting, upgrades, builds, and repair questions. Requests should start with equipment details so the issue can be reviewed first.",
   offers: {
     "@type": "Offer",
     priceSpecification: {
@@ -59,26 +41,26 @@ const computerRepairSchema = {
 
 const statusItems = [
   { label: "Page Type", value: "Computer Repair" },
-  { label: "Focus", value: "Hardware Repair & Troubleshooting" },
+  { label: "Focus", value: "Hardware & Troubleshooting" },
   { label: "Rate", value: "$55/hr Labor" },
-  { label: "Quote", value: "Send Details First" },
+  { label: "Next Step", value: "Start With The Form" },
 ];
 
 const intakeRows = [
   {
     number: "01",
     title: "Hardware-focused computer repair",
-    text: "Arkansas Geek handles practical computer repair, hardware issues, troubleshooting, upgrades, replacement parts, builds, and general repair questions. Labor is typically $55/hr, but the final cost depends on what is actually going on with the machine.",
+    text: "Arkansas Geek handles practical computer repair, hardware issues, troubleshooting, upgrades, replacement parts, builds, and general repair questions. The goal is to understand what is actually going on before money is spent on the wrong fix.",
   },
   {
     number: "02",
-    title: "What to include when you reach out",
-    text: "When you reach out, include the type of computer, what it is doing, when it started, any error messages, and whether anything was recently changed, upgraded, dropped, unplugged, or replaced. A few clear details up front make the quote a lot easier.",
+    title: "What to include in the request",
+    text: "Send the type of computer, what problem you are having, when it started, any error messages or symptoms, and whether anything was recently changed, upgraded, replaced, or unplugged.",
   },
   {
     number: "03",
-    title: "Pricing and photos coming soon",
-    text: "The usual labor rate is $55/hr, but every job is different. Some fixes are quick, some need parts, and some need more troubleshooting before there is a solid answer, so it is best to ask first instead of guessing from a flat price.",
+    title: "A quick follow-up may save a visit",
+    text: "Some issues can be narrowed down with a few questions or a short call before scheduling anything. Labor is typically $55/hr, but the details decide whether it is a quick answer, a parts issue, or a repair job.",
   },
 ];
 
@@ -88,12 +70,12 @@ export default function ComputerRepairPage() {
       <Header />
 
       <main>
-<script
-  type="application/ld+json"
-  dangerouslySetInnerHTML={{
-    __html: JSON.stringify(computerRepairSchema),
-  }}
-/>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(computerRepairSchema),
+          }}
+        />
         <section className="relative min-h-screen overflow-hidden pt-32">
           <div className="absolute inset-0 -z-30">
             <div className="absolute inset-0 diagnostic-grid opacity-70" />
@@ -113,22 +95,21 @@ export default function ComputerRepairPage() {
 
                 <p className="lead mt-7">
                   Arkansas Geek offers computer repair and troubleshooting with
-                  a focus on hardware-related issues, upgrades, builds, and
-                  repair questions. Labor is typically $55/hr, but the best move
-                  is to send the details first so the job can be quoted more
-                  fairly.
+                  a focus on hardware-related issues, builds, upgrades, and
+                  practical questions. Start with the repair form so the problem
+                  can be understood before anything is scheduled.
                 </p>
 
                 <div className="mt-9 flex flex-col gap-3 sm:flex-row">
-                  <a href="mailto:arkansasgeekadmin@gmail.com" className="btn-primary">
+                  <Link href="/repair-request" className="btn-primary">
+                    Start a Repair Request
+                    <FaArrowRight />
+                  </Link>
+
+                  <a href="mailto:arkansasgeekadmin@gmail.com" className="btn-secondary">
                     Email About Computer Repair
                     <FaEnvelope />
                   </a>
-
-                  <Link href="/" className="btn-secondary">
-                    Back to Home
-                    <FaArrowRight />
-                  </Link>
                 </div>
               </div>
 
@@ -161,7 +142,7 @@ export default function ComputerRepairPage() {
                     <div className="mb-8 flex items-start justify-between gap-6">
                       <div>
                         <p className="font-mono-custom text-xs font-black uppercase tracking-[0.16em] text-[var(--page-accent-soft)]">
-                          Computer Repair
+                          Repair Intake
                         </p>
 
                         <h2 className="font-heading mt-3 text-4xl font-black tracking-[-0.06em] text-[var(--cream)]">
@@ -180,16 +161,16 @@ export default function ComputerRepairPage() {
                       </p>
 
                       <p className="text-[var(--cream-soft)]">
-                        focus: hardware repair, troubleshooting, builds, and
-                        repair questions
+                        focus: hardware repair, troubleshooting, upgrades, and
+                        builds
                       </p>
 
                       <p className="text-[var(--cream-soft)]">
-                        rate: $55/hr labor, quote depends on the job
+                        first step: send equipment and issue details
                       </p>
 
                       <p className="text-[var(--page-accent-soft)]">
-                        contact: arkansasgeekadmin@gmail.com
+                        rate: typically $55/hr labor after the job is reviewed
                       </p>
                     </div>
 
@@ -216,11 +197,11 @@ export default function ComputerRepairPage() {
 
                 <div className="absolute -bottom-5 -right-5 z-20 hidden rounded-3xl border border-[var(--page-accent-soft)]/25 bg-[rgba(13,17,16,0.9)] px-5 py-4 shadow-[var(--shadow-soft)] backdrop-blur-xl md:block">
                   <p className="font-mono-custom text-[0.68rem] font-black uppercase tracking-[0.14em] text-[var(--page-secondary)]">
-                    email first
+                    questions first
                   </p>
 
                   <p className="mt-1 font-heading text-xl font-black tracking-[-0.04em] text-[var(--cream)]">
-                    $55/hr labor
+                    Details before a visit
                   </p>
                 </div>
               </div>
@@ -270,13 +251,14 @@ export default function ComputerRepairPage() {
 
               <div className="absolute bottom-6 left-6 max-w-2xl pr-6">
                 <h2 className="font-heading text-4xl font-black tracking-[-0.06em] text-[var(--cream)] md:text-5xl">
-                  Real repair photos can be added as the computer side grows.
+                  Real repair work starts with real troubleshooting.
                 </h2>
 
                 <p className="mt-4 max-w-xl leading-8 text-[var(--cream-soft)]">
-                  This area can be used for real computer builds, workbench photos,
-                  hardware repairs, upgrades, or before-and-after shots as more
-                  repair photos are gathered.
+                  Computer issues are not always obvious from the outside. The
+                  right questions can help separate a simple fix from a parts
+                  problem, bad connection, failed component, or deeper system
+                  issue.
                 </p>
               </div>
             </div>
@@ -296,17 +278,13 @@ export default function ComputerRepairPage() {
                 <p className="lead mt-6">
                   The more detail you send up front, the easier it is to point
                   the repair in the right direction. Start with the issue, the
-                  computer type, and anything that changed recently so the quote
-                  is not just a guess.
+                  computer type, and anything that changed recently.
                 </p>
 
-                <a
-                  href="mailto:arkansasgeekadmin@gmail.com"
-                  className="btn-primary mt-8"
-                >
-                  Email Arkansas Geek
-                  <FaEnvelope />
-                </a>
+                <Link href="/repair-request" className="btn-primary mt-8">
+                  Start Repair Request
+                  <FaArrowRight />
+                </Link>
 
                 <div className="mt-8 hidden overflow-hidden rounded-[2rem] border border-[var(--page-accent-soft)]/25 shadow-[var(--shadow-soft)] lg:block">
                   <img
@@ -317,12 +295,12 @@ export default function ComputerRepairPage() {
 
                   <div className="border-t border-[var(--line)] bg-[rgba(13,17,16,0.72)] p-5">
                     <p className="font-mono-custom text-[0.7rem] font-black uppercase tracking-[0.14em] text-[var(--page-accent-soft)]">
-                      Hardware-focused help
+                      Troubleshooting mindset
                     </p>
 
                     <p className="mt-2 leading-7 text-[var(--cream-soft)]">
-                      Most labor is $55/hr, but the job details decide what the
-                      repair actually needs.
+                      Some issues may be narrowed down with a quick follow-up
+                      before an in-person visit makes sense.
                     </p>
                   </div>
                 </div>
@@ -362,29 +340,25 @@ export default function ComputerRepairPage() {
               <div className="relative grid gap-10 lg:grid-cols-[0.85fr_1.15fr] lg:items-center">
                 <div>
                   <p className="font-mono-custom text-xs font-black uppercase tracking-[0.14em] text-[var(--page-secondary)]">
-                    Email Contact
+                    Repair Request
                   </p>
 
                   <h2 className="font-heading mt-3 text-4xl font-black tracking-[-0.06em] text-[var(--cream)] md:text-6xl">
-                    Start with an email.
+                    Tell Arkansas Geek what you are working with.
                   </h2>
                 </div>
 
                 <div>
                   <p className="max-w-2xl leading-8 text-[var(--cream-soft)]">
-                    For computer repair, email Arkansas Geek with the type of
-                    computer, the issue you are having, and the best way to
-                    follow up. Labor is typically $55/hr, but every job is
-                    different, so send the details first for a better quote.
+                    Use the form to send the equipment type, symptoms, recent
+                    changes, and what you want done. Do not send passwords,
+                    payment details, or sensitive personal files.
                   </p>
 
-                  <a
-                    href="mailto:arkansasgeekadmin@gmail.com"
-                    className="btn-primary mt-8"
-                  >
-                    arkansasgeekadmin@gmail.com
-                    <FaEnvelope />
-                  </a>
+                  <Link href="/repair-request" className="btn-primary mt-8">
+                    Start Repair Request
+                    <FaArrowRight />
+                  </Link>
                 </div>
               </div>
             </div>

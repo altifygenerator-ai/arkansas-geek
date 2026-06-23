@@ -16,7 +16,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
     {
       path: "/air-cooled-volkswagen-repair",
-      priority: 0.9,
+      priority: 0.85,
+      changeFrequency: "monthly" as const,
+    },
+    {
+      path: "/repair-request",
+      priority: 0.8,
       changeFrequency: "monthly" as const,
     },
   ];

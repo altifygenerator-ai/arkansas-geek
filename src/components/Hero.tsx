@@ -124,35 +124,30 @@ export default function Hero() {
           </h1>
 
           <p className="lead mt-7">
-            Arkansas Geek is built around practical computer repair, with a
-            specialty side for air-cooled Volkswagen work. Labor is typically
-            $55/hr, but every job is different, so the best first step is to
-            reach out with the details and get a better idea before scheduling.
+            Arkansas Geek is built around practical computer repair backed by
+            real IT troubleshooting experience, with a specialty side for
+            air-cooled Volkswagen work. Send the details first so the issue can
+            be understood before anything is scheduled.
           </p>
 
           <div className="mt-9 flex flex-col gap-3 sm:flex-row">
-            <Link href="/computer-repair" className="btn-primary">
-              Computer Repair
+            <Link href="/repair-request" className="btn-primary">
+              Start a Repair Request
               <FaArrowRight />
             </Link>
 
-            <Link
-              href="/air-cooled-volkswagen-repair"
-              className="btn-secondary"
-            >
-              Air-Cooled VW Repair
+            <Link href="/computer-repair" className="btn-secondary">
+              Computer Repair
               <FaArrowRight />
             </Link>
           </div>
 
           <div className="mt-10 grid gap-3 border-l border-[var(--line-strong)] pl-5">
-            <p className="tech-label">Email Contact</p>
-            <a
-              href="mailto:arkansasgeekadminl@gmail.com"
-              className="text-lg font-bold text-[var(--cream)] transition hover:text-[var(--amber-soft)]"
-            >
-              arkansasgeekadmin@gmail.com
-            </a>
+            <p className="tech-label">Questions first</p>
+            <p className="max-w-xl leading-7 text-[var(--cream-soft)]">
+              A few clear details may save a visit, narrow down the problem, or
+              make the repair easier to quote fairly.
+            </p>
           </div>
         </motion.div>
 
@@ -195,9 +190,9 @@ export default function Hero() {
                         Computer Repair
                       </h3>
                       <p className="mt-2 leading-7 text-[var(--cream-soft)]">
-                        Computer repair, troubleshooting, upgrades, and hardware
-                        questions. Most work is billed around $55/hr, with a
-                        clearer quote after the issue is looked over.
+                        Hardware-focused computer repair, troubleshooting,
+                        upgrades, builds, and practical questions before money
+                        is spent on the wrong fix.
                       </p>
                     </div>
                   </div>
@@ -217,9 +212,9 @@ export default function Hero() {
                         Air-Cooled Volkswagen Repair
                       </h3>
                       <p className="mt-2 leading-7 text-[var(--cream-soft)]">
-                        Air-cooled VW repair is handled case by case, mostly for
-                        smaller jobs like brakes, suspension, and minor repair
-                        needs. Send details first for a better quote.
+                        Case-by-case classic VW help for smaller jobs like
+                        brakes, suspension, minor repairs, and maintenance-type
+                        questions.
                       </p>
                     </div>
                   </div>

@@ -1,4 +1,5 @@
-import { FaEnvelope } from "react-icons/fa6";
+import Link from "next/link";
+import { FaArrowRight, FaEnvelope } from "react-icons/fa6";
 import FadeIn from "@/components/FadeIn";
 
 export default function ContactCTA() {
@@ -20,25 +21,26 @@ export default function ContactCTA() {
 
               <div>
                 <h2 className="font-heading text-5xl font-black tracking-[-0.065em] text-[var(--cream)] md:text-7xl">
-                  Have a repair question?
+                  Send the details first.
                 </h2>
 
                 <p className="mt-6 max-w-3xl leading-8 text-[var(--cream-soft)]">
-                  Email Arkansas Geek with what you need help with. Labor is
-                  typically $55/hr, but computer and VW jobs can vary a lot, so
-                  send the details first and get a better idea of the work before
-                  anything is scheduled.
+                  Start with the repair form so Arkansas Geek can see what
+                  equipment you have, what you want done, and what questions
+                  need to be answered. Some issues can be narrowed down before a
+                  visit, which can save time and avoid unnecessary cost.
                 </p>
 
                 <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:items-center">
-                  <a href="mailto:arkansasgeekadmin@gmail.com" className="btn-primary">
-                    arkansasgeekadmin@gmail.com
+                  <Link href="/repair-request" className="btn-primary">
+                    Start a Repair Request
+                    <FaArrowRight />
+                  </Link>
+
+                  <a href="mailto:arkansasgeekadmin@gmail.com" className="btn-secondary">
+                    Email Instead
                     <FaEnvelope />
                   </a>
-
-                  <p className="font-mono-custom text-xs font-bold uppercase tracking-[0.14em] text-[var(--muted)]">
-                    Send details first
-                  </p>
                 </div>
               </div>
             </div>
