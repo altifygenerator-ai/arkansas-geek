@@ -4,21 +4,82 @@ import { FaArrowRight, FaCircleInfo, FaEnvelope } from "react-icons/fa6";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import RepairRequestForm from "@/components/RepairRequestForm";
+import { siteName, siteUrl } from "@/lib/site";
+
+const pagePath = "/repair-request";
+const pageUrl = `${siteUrl}${pagePath}`;
 
 export const metadata: Metadata = {
   title: "Repair Request",
   description:
     "Start a computer repair or air-cooled Volkswagen repair request with Arkansas Geek by sending equipment details, issue notes, and follow-up information.",
+  alternates: {
+    canonical: pagePath,
+  },
+  openGraph: {
+    url: pagePath,
+    title: "Repair Request | Arkansas Geek",
+    description:
+      "Start a computer repair or air-cooled Volkswagen repair request with Arkansas Geek by sending equipment details, issue notes, and follow-up information.",
+    images: [
+      {
+        url: "/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Arkansas Geek repair request form",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Repair Request | Arkansas Geek",
+    description:
+      "Start a computer repair or air-cooled Volkswagen repair request with Arkansas Geek by sending equipment details, issue notes, and follow-up information.",
+    images: ["/og-image.jpg"],
+  },
 };
 
-const requestSchema = {
-  "@context": "https://schema.org",
-  "@type": "ContactPage",
-  name: "Arkansas Geek Repair Request",
-  url: "https://arkansasgeek.com/repair-request",
-  description:
-    "Repair request form for computer repair and case-by-case air-cooled Volkswagen repair through Arkansas Geek.",
-};
+const requestSchema = [
+  {
+    "@context": "https://schema.org",
+    "@type": "ContactPage",
+    "@id": `${pageUrl}#webpage`,
+    name: `${siteName} Repair Request`,
+    url: pageUrl,
+    isPartOf: {
+      "@type": "WebSite",
+      "@id": `${siteUrl}/#website`,
+      name: siteName,
+      url: siteUrl,
+    },
+    about: {
+      "@type": "LocalBusiness",
+      "@id": `${siteUrl}/#business`,
+      name: siteName,
+      url: siteUrl,
+    },
+    description:
+      "Repair request form for computer repair and case-by-case air-cooled Volkswagen repair through Arkansas Geek.",
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Home",
+        item: siteUrl,
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: "Repair Request",
+        item: pageUrl,
+      },
+    ],
+  },
+];
 
 export default function RepairRequestPage() {
   return (

@@ -3,41 +3,112 @@ import Link from "next/link";
 import { FaArrowRight, FaEnvelope, FaTerminal } from "react-icons/fa6";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import { siteEmail, siteName, siteUrl } from "@/lib/site";
+
+const pagePath = "/computer-repair";
+const pageUrl = `${siteUrl}${pagePath}`;
 
 export const metadata: Metadata = {
   title: "Computer Repair",
   description:
     "Hardware-focused computer repair, troubleshooting, upgrades, builds, and repair request intake through Arkansas Geek.",
+  alternates: {
+    canonical: pagePath,
+  },
+  openGraph: {
+    url: pagePath,
+    title: "Computer Repair | Arkansas Geek",
+    description:
+      "Hardware-focused computer repair, troubleshooting, upgrades, builds, and repair request intake through Arkansas Geek.",
+    images: [
+      {
+        url: "/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Arkansas Geek computer repair in Arkansas",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Computer Repair | Arkansas Geek",
+    description:
+      "Hardware-focused computer repair, troubleshooting, upgrades, builds, and repair request intake through Arkansas Geek.",
+    images: ["/og-image.jpg"],
+  },
 };
 
-const computerRepairSchema = {
-  "@context": "https://schema.org",
-  "@type": "Service",
-  name: "Computer Repair",
-  provider: {
-    "@type": "LocalBusiness",
-    name: "Arkansas Geek",
-    url: "https://arkansasgeek.com",
-    email: "arkansasgeekadmin@gmail.com",
-  },
-  areaServed: {
-    "@type": "State",
-    name: "Arkansas",
-  },
-  description:
-    "Hardware-focused computer repair, troubleshooting, upgrades, builds, and repair questions. Requests should start with equipment details so the issue can be reviewed first.",
-  offers: {
-    "@type": "Offer",
-    priceSpecification: {
-      "@type": "UnitPriceSpecification",
-      price: 55,
-      priceCurrency: "USD",
-      unitText: "HOUR",
+const computerRepairSchema = [
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "@id": `${pageUrl}#service`,
+    name: "Computer Repair",
+    url: pageUrl,
+    mainEntityOfPage: pageUrl,
+    provider: {
+      "@type": "LocalBusiness",
+      "@id": `${siteUrl}/#business`,
+      name: siteName,
+      url: siteUrl,
+      email: siteEmail,
+    },
+    areaServed: {
+      "@type": "State",
+      name: "Arkansas",
     },
     description:
-      "Labor is typically $55/hr. Final cost depends on the computer, issue, parts needed, and job details.",
+      "Hardware-focused computer repair, troubleshooting, upgrades, builds, and repair questions. Requests should start with equipment details so the issue can be reviewed first.",
+    offers: {
+      "@type": "Offer",
+      url: pageUrl,
+      priceSpecification: {
+        "@type": "UnitPriceSpecification",
+        price: 55,
+        priceCurrency: "USD",
+        unitText: "HOUR",
+      },
+      description:
+        "Labor is typically $55/hr. Final cost depends on the computer, issue, parts needed, and job details.",
+    },
   },
-};
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": `${pageUrl}#webpage`,
+    url: pageUrl,
+    name: "Computer Repair | Arkansas Geek",
+    description:
+      "Hardware-focused computer repair, troubleshooting, upgrades, builds, and repair questions. Requests should start with equipment details so the issue can be reviewed first.",
+    isPartOf: {
+      "@type": "WebSite",
+      "@id": `${siteUrl}/#website`,
+      name: siteName,
+      url: siteUrl,
+    },
+    mainEntity: {
+      "@id": `${pageUrl}#service`,
+    },
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Home",
+        item: siteUrl,
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: "Computer Repair",
+        item: pageUrl,
+      },
+    ],
+  },
+];
 
 const statusItems = [
   { label: "Page Type", value: "Computer Repair" },
@@ -117,7 +188,7 @@ export default function ComputerRepairPage() {
                 <div className="absolute -right-7 top-8 hidden h-[82%] w-36 overflow-hidden rounded-[2rem] border border-[var(--page-accent-soft)]/25 opacity-75 shadow-[var(--shadow-soft)] lg:block">
                   <img
                     src="/images/pc-1.jpg"
-                    alt=""
+                    alt="Computer repair hardware photo"
                     className="h-full w-full object-cover"
                   />
                   <div className="absolute inset-0 bg-[rgba(13,17,16,0.38)]" />
@@ -235,7 +306,7 @@ export default function ComputerRepairPage() {
             <div className="relative h-[22rem] overflow-hidden rounded-[2.75rem] border border-[var(--page-accent-soft)]/25 shadow-[var(--shadow-soft)] md:h-[26rem]">
               <img
                 src="/images/pc-2.jpg"
-                alt=""
+                alt="Computer repair troubleshooting photo"
                 className="h-full w-full object-cover"
               />
 
@@ -289,7 +360,7 @@ export default function ComputerRepairPage() {
                 <div className="mt-8 hidden overflow-hidden rounded-[2rem] border border-[var(--page-accent-soft)]/25 shadow-[var(--shadow-soft)] lg:block">
                   <img
                     src="/images/pc-3.jpg"
-                    alt=""
+                    alt="Computer repair diagnostic photo"
                     className="h-72 w-full object-cover"
                   />
 

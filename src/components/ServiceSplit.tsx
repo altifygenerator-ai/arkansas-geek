@@ -49,7 +49,7 @@ export default function ServiceSplit() {
                   <div className="relative h-72 overflow-hidden">
                     <img
                       src={service.image}
-                      alt=""
+                      alt={`${service.title} service photo`}
                       className="h-full w-full object-cover transition duration-700 group-hover:scale-105"
                     />
 

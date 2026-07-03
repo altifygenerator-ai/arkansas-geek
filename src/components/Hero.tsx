@@ -69,7 +69,7 @@ export default function Hero() {
             >
               <img
                 src={image.src}
-                alt=""
+                alt={`${image.label} photo for Arkansas Geek`}
                 className={`h-full w-full object-cover ${
                   image.src.includes("bug")
                     ? "scale-100 object-center"

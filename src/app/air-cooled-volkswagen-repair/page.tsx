@@ -3,41 +3,112 @@ import Link from "next/link";
 import { FaArrowRight, FaEnvelope, FaWrench } from "react-icons/fa6";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import { siteEmail, siteName, siteUrl } from "@/lib/site";
+
+const pagePath = "/air-cooled-volkswagen-repair";
+const pageUrl = `${siteUrl}${pagePath}`;
 
 export const metadata: Metadata = {
   title: "Air-Cooled Volkswagen Repair",
   description:
     "Case-by-case air-cooled Volkswagen repair through Arkansas Geek, focused on smaller jobs, minor repair needs, brakes, suspension, and maintenance-type work.",
+  alternates: {
+    canonical: pagePath,
+  },
+  openGraph: {
+    url: pagePath,
+    title: "Air-Cooled Volkswagen Repair | Arkansas Geek",
+    description:
+      "Case-by-case air-cooled Volkswagen repair through Arkansas Geek, focused on smaller jobs, minor repair needs, brakes, suspension, and maintenance-type work.",
+    images: [
+      {
+        url: "/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Arkansas Geek air-cooled Volkswagen repair in Arkansas",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Air-Cooled Volkswagen Repair | Arkansas Geek",
+    description:
+      "Case-by-case air-cooled Volkswagen repair through Arkansas Geek, focused on smaller jobs, minor repair needs, brakes, suspension, and maintenance-type work.",
+    images: ["/og-image.jpg"],
+  },
 };
 
-const volkswagenRepairSchema = {
-  "@context": "https://schema.org",
-  "@type": "Service",
-  name: "Air-Cooled Volkswagen Repair",
-  provider: {
-    "@type": "LocalBusiness",
-    name: "Arkansas Geek",
-    url: "https://arkansasgeek.com",
-    email: "arkansasgeekadmin@gmail.com",
-  },
-  areaServed: {
-    "@type": "State",
-    name: "Arkansas",
-  },
-  description:
-    "Case-by-case air-cooled Volkswagen repair help for smaller jobs, minor repair needs, brake-related work, suspension-related work, and maintenance-type questions. Major rebuilds and large restoration work are not the current focus.",
-  offers: {
-    "@type": "Offer",
-    priceSpecification: {
-      "@type": "UnitPriceSpecification",
-      price: 55,
-      priceCurrency: "USD",
-      unitText: "HOUR",
+const volkswagenRepairSchema = [
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "@id": `${pageUrl}#service`,
+    name: "Air-Cooled Volkswagen Repair",
+    url: pageUrl,
+    mainEntityOfPage: pageUrl,
+    provider: {
+      "@type": "LocalBusiness",
+      "@id": `${siteUrl}/#business`,
+      name: siteName,
+      url: siteUrl,
+      email: siteEmail,
+    },
+    areaServed: {
+      "@type": "State",
+      name: "Arkansas",
     },
     description:
-      "Labor is typically $55/hr. Final cost depends on the vehicle, issue, parts needed, and job details.",
+      "Case-by-case air-cooled Volkswagen repair help for smaller jobs, minor repair needs, brake-related work, suspension-related work, and maintenance-type questions. Major rebuilds and large restoration work are not the current focus.",
+    offers: {
+      "@type": "Offer",
+      url: pageUrl,
+      priceSpecification: {
+        "@type": "UnitPriceSpecification",
+        price: 55,
+        priceCurrency: "USD",
+        unitText: "HOUR",
+      },
+      description:
+        "Labor is typically $55/hr. Final cost depends on the vehicle, issue, parts needed, and job details.",
+    },
   },
-};
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": `${pageUrl}#webpage`,
+    url: pageUrl,
+    name: "Air-Cooled Volkswagen Repair | Arkansas Geek",
+    description:
+      "Case-by-case air-cooled Volkswagen repair help for smaller jobs, minor repair needs, brake-related work, suspension-related work, and maintenance-type questions. Major rebuilds and large restoration work are not the current focus.",
+    isPartOf: {
+      "@type": "WebSite",
+      "@id": `${siteUrl}/#website`,
+      name: siteName,
+      url: siteUrl,
+    },
+    mainEntity: {
+      "@id": `${pageUrl}#service`,
+    },
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Home",
+        item: siteUrl,
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: "Air-Cooled Volkswagen Repair",
+        item: pageUrl,
+      },
+    ],
+  },
+];
 
 const infoBlocks = [
   {
@@ -72,7 +143,7 @@ export default function AirCooledVolkswagenRepairPage() {
         <section className="relative min-h-screen overflow-hidden">
           <img
             src="/images/bug-1.jpg"
-            alt=""
+            alt="Air-cooled Volkswagen repair through Arkansas Geek"
             className="absolute inset-0 h-full w-full object-cover"
           />
 
@@ -136,7 +207,7 @@ export default function AirCooledVolkswagenRepairPage() {
             <div className="relative min-h-[34rem] border-b border-[var(--line)] lg:border-b-0 lg:border-r">
               <img
                 src="/images/bug-2.jpg"
-                alt=""
+                alt="Classic air-cooled Volkswagen repair photo"
                 className="absolute inset-0 h-full w-full object-cover"
               />
               <div className="absolute inset-0 bg-[rgba(13,17,16,0.38)]" />
@@ -261,7 +332,7 @@ export default function AirCooledVolkswagenRepairPage() {
             <div className="relative h-[28rem] overflow-hidden border-b border-[var(--line)] md:border-b-0 md:border-r">
               <img
                 src="/images/bug-3.jpg"
-                alt=""
+                alt="Air-cooled Volkswagen detail photo"
                 className="h-full w-full object-cover"
               />
               <div className="absolute inset-0 bg-[rgba(13,17,16,0.3)]" />
@@ -270,7 +341,7 @@ export default function AirCooledVolkswagenRepairPage() {
             <div className="relative h-[28rem] overflow-hidden border-b border-[var(--line)] md:border-b-0 md:border-r">
               <img
                 src="/images/bug-4.jpg"
-                alt=""
+                alt="Air-cooled Volkswagen garage photo"
                 className="h-full w-full object-cover"
               />
               <div className="absolute inset-0 bg-[rgba(13,17,16,0.3)]" />
@@ -279,7 +350,7 @@ export default function AirCooledVolkswagenRepairPage() {
             <div className="relative h-[28rem] overflow-hidden">
               <img
                 src="/images/bug-5.jpg"
-                alt=""
+                alt="Classic Volkswagen photo"
                 className="h-full w-full object-cover"
               />
               <div className="absolute inset-0 bg-[rgba(13,17,16,0.3)]" />

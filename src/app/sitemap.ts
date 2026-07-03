@@ -1,8 +1,9 @@
 import type { MetadataRoute } from "next";
+import { siteUrl } from "@/lib/site";
+
+const lastModified = new Date("2026-07-03");
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = "https://arkansasgeek.com";
-
   const routes = [
     {
       path: "",
@@ -27,8 +28,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
   ];
 
   return routes.map((route) => ({
-    url: `${baseUrl}${route.path}`,
-    lastModified: new Date(),
+    url: `${siteUrl}${route.path}`,
+    lastModified,
     changeFrequency: route.changeFrequency,
     priority: route.priority,
   }));

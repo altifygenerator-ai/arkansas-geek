@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { FaEnvelope, FaFacebookF } from "react-icons/fa6";
 
-const facebookUrl = "https://www.facebook.com/share/1BCnj1ZdVn/?mibextid=wwXIfr";
+import { facebookUrl } from "@/lib/site";
 
 export default function Footer() {
   return (
