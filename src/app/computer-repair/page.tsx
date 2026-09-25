@@ -4,6 +4,7 @@ import { FaArrowRight, FaEnvelope, FaTerminal } from "react-icons/fa6";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { siteEmail, siteName, siteUrl } from "@/lib/site";
+import { computerServicePages, serviceAreaPages } from "@/data/seo-content";
 
 const pagePath = "/computer-repair";
 const pageUrl = `${siteUrl}${pagePath}`;
@@ -435,6 +436,78 @@ export default function ComputerRepairPage() {
             </div>
           </div>
         </section>
+
+        <section className="border-y border-[var(--line)] bg-[rgba(244,239,227,0.025)] py-20 md:py-28">
+          <div className="container-custom">
+            <div className="grid gap-10 lg:grid-cols-[0.4fr_0.6fr]">
+              <div>
+                <div className="eyebrow">Computer Repair Services</div>
+                <h2 className="section-title mt-5">Go straight to the kind of help you need.</h2>
+                <p className="lead mt-6">
+                  These pages break out the computer work already handled through
+                  Arkansas Geek without turning the site into a list of services
+                  that are not actually offered.
+                </p>
+              </div>
+
+              <div className="grid gap-4 sm:grid-cols-2">
+                {computerServicePages.map((service) => (
+                  <Link
+                    key={service.slug}
+                    href={"/computer-repair/services/" + service.slug}
+                    className="group fresh-panel p-6 transition hover:-translate-y-1"
+                  >
+                    <p className="font-mono-custom text-xs font-black uppercase tracking-[0.14em] text-[var(--blue-soft)]">
+                      Computer Repair
+                    </p>
+                    <h3 className="font-heading mt-3 text-3xl font-black tracking-[-0.055em] text-[var(--cream)]">
+                      {service.shortTitle}
+                    </h3>
+                    <p className="mt-3 leading-7 text-[var(--cream-soft)]">
+                      {service.metaDescription}
+                    </p>
+                    <span className="mt-5 inline-flex items-center gap-2 font-black text-[var(--blue-soft)]">
+                      View service
+                      <FaArrowRight className="transition group-hover:translate-x-1" />
+                    </span>
+                  </Link>
+                ))}
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section className="py-20 md:py-28">
+          <div className="container-custom">
+            <div className="mb-10 max-w-4xl">
+              <div className="eyebrow">Service Areas</div>
+              <h2 className="section-title mt-5">Computer repair pages for the Arkansas areas already served.</h2>
+              <p className="lead mt-6">
+                City pages are service-area information, not separate storefronts.
+                Start with the repair request so the issue and location can be
+                reviewed before scheduling.
+              </p>
+            </div>
+
+            <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+              {serviceAreaPages.map((area) => (
+                <Link
+                  key={area.slug}
+                  href={"/computer-repair/areas/" + area.slug}
+                  className="rounded-[1.5rem] border border-[var(--line)] bg-[rgba(244,239,227,0.04)] p-5 font-bold text-[var(--cream)] transition hover:-translate-y-1 hover:border-[var(--line-strong)]"
+                >
+                  {area.city}, {area.state}
+                </Link>
+              ))}
+            </div>
+
+            <Link href="/service-areas" className="btn-secondary mt-8">
+              View All Service Areas
+              <FaArrowRight />
+            </Link>
+          </div>
+        </section>
+
       </main>
 
       <Footer />
