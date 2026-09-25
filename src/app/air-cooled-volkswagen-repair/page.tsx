@@ -192,10 +192,9 @@ export default function AirCooledVolkswagenRepairPage() {
                   </h2>
 
                   <p className="mt-4 leading-8 text-[var(--cream-soft)]">
-                    This page gives the air-cooled Volkswagen work a clear home
-                    while keeping it honest: smaller jobs may be considered, but
-                    major rebuilds and large restoration projects are not the
-                    focus right now.
+                    The air-cooled Volkswagen side stays intentionally focused:
+                    smaller jobs may be considered, while major rebuilds and
+                    large restoration projects are not the focus right now.
                   </p>
                 </div>
               </div>
@@ -216,11 +215,11 @@ export default function AirCooledVolkswagenRepairPage() {
 
               <div className="absolute bottom-8 left-8 right-8">
                 <p className="font-mono-custom text-xs font-black uppercase tracking-[0.16em] text-[var(--page-accent-soft)]">
-                  VW Photo Area
+                  Air-Cooled VW Work
                 </p>
 
                 <h2 className="font-heading mt-3 text-4xl font-black tracking-[-0.06em] text-[var(--cream)]">
-                  Real Volkswagen photos can carry this page.
+                  Older Volkswagens deserve a careful, practical approach.
                 </h2>
               </div>
             </div>
@@ -399,7 +398,7 @@ export default function AirCooledVolkswagenRepairPage() {
                 <div className="eyebrow">VW Work Details</div>
                 <h2 className="section-title mt-5">See the smaller jobs Arkansas Geek may consider.</h2>
                 <p className="lead mt-6">
-                  These pages stay inside the same limits already stated here:
+                  These repair options stay inside the same limits stated here:
                   case-by-case air-cooled Volkswagen work, not major rebuilds or
                   full restoration projects.
                 </p>
