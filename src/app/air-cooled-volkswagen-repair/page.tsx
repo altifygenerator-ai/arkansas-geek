@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { FaArrowRight, FaEnvelope, FaWrench } from "react-icons/fa6";
 import Header from "@/components/Header";
@@ -142,10 +143,13 @@ export default function AirCooledVolkswagenRepairPage() {
           }}
         />
         <section className="relative min-h-screen overflow-hidden">
-          <img
+          <Image
             src="/images/bug-1.jpg"
             alt="Air-cooled Volkswagen repair through Arkansas Geek"
-            className="absolute inset-0 h-full w-full object-cover"
+            fill
+            priority
+            sizes="100vw"
+            className="object-cover"
           />
 
           <div className="absolute inset-0 bg-gradient-to-r from-[rgba(13,17,16,0.96)] via-[rgba(13,17,16,0.62)] to-[rgba(13,17,16,0.24)]" />
@@ -205,10 +209,12 @@ export default function AirCooledVolkswagenRepairPage() {
         <section className="relative overflow-hidden border-y border-[var(--line)] bg-[rgba(244,239,227,0.025)]">
           <div className="grid lg:grid-cols-[0.42fr_0.58fr]">
             <div className="relative min-h-[34rem] border-b border-[var(--line)] lg:border-b-0 lg:border-r">
-              <img
+              <Image
                 src="/images/bug-2.jpg"
                 alt="Classic air-cooled Volkswagen repair photo"
-                className="absolute inset-0 h-full w-full object-cover"
+                fill
+                sizes="(max-width: 1024px) 100vw, 42vw"
+                className="object-cover"
               />
               <div className="absolute inset-0 bg-[rgba(13,17,16,0.38)]" />
               <div className="absolute inset-0 bg-gradient-to-t from-[var(--bg)] via-transparent to-transparent" />
@@ -330,28 +336,34 @@ export default function AirCooledVolkswagenRepairPage() {
         <section className="relative overflow-hidden border-y border-[var(--line)]">
           <div className="grid md:grid-cols-3">
             <div className="relative h-[28rem] overflow-hidden border-b border-[var(--line)] md:border-b-0 md:border-r">
-              <img
+              <Image
                 src="/images/bug-3.jpg"
                 alt="Air-cooled Volkswagen detail photo"
-                className="h-full w-full object-cover"
+                fill
+                sizes="(max-width: 768px) 100vw, 33vw"
+                className="object-cover"
               />
               <div className="absolute inset-0 bg-[rgba(13,17,16,0.3)]" />
             </div>
 
             <div className="relative h-[28rem] overflow-hidden border-b border-[var(--line)] md:border-b-0 md:border-r">
-              <img
+              <Image
                 src="/images/bug-4.jpg"
                 alt="Air-cooled Volkswagen garage photo"
-                className="h-full w-full object-cover"
+                fill
+                sizes="(max-width: 768px) 100vw, 33vw"
+                className="object-cover"
               />
               <div className="absolute inset-0 bg-[rgba(13,17,16,0.3)]" />
             </div>
 
             <div className="relative h-[28rem] overflow-hidden">
-              <img
+              <Image
                 src="/images/bug-5.jpg"
                 alt="Classic Volkswagen photo"
-                className="h-full w-full object-cover"
+                fill
+                sizes="(max-width: 768px) 100vw, 33vw"
+                className="object-cover"
               />
               <div className="absolute inset-0 bg-[rgba(13,17,16,0.3)]" />
             </div>
