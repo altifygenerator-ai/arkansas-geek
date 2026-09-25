@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Link from "next/link";
 import { FaArrowRight, FaEnvelope } from "react-icons/fa6";
 
 type FormState = "idle" | "sending" | "sent" | "error";
@@ -43,7 +44,16 @@ export default function RepairRequestForm() {
   }
 
   return (
-    <form onSubmit={handleSubmit} className="grid gap-5">
+    <form onSubmit={handleSubmit} className="relative grid gap-5">
+      <div className="absolute -left-[10000px] top-auto h-px w-px overflow-hidden" aria-hidden="true">
+        <label htmlFor="website">Website</label>
+        <input
+          id="website"
+          name="website"
+          tabIndex={-1}
+          autoComplete="off"
+        />
+      </div>
       <div className="grid gap-5 md:grid-cols-2">
         <label className="grid gap-2">
           <span className="font-mono-custom text-xs font-black uppercase tracking-[0.14em] text-[var(--amber-soft)]">
@@ -151,6 +161,15 @@ export default function RepairRequestForm() {
         </p>
       </div>
 
+      <p className="text-sm leading-6 text-[var(--muted)]">
+        By sending this form, you are asking Arkansas Geek to contact you about
+        this repair request. See the{" "}
+        <Link href="/privacy" className="font-bold text-[var(--cream-soft)] underline underline-offset-4">
+          privacy page
+        </Link>{" "}
+        for how form information is handled.
+      </p>
+
       <div className="flex flex-col gap-3 sm:flex-row sm:items-center">
         <button
           type="submit"
@@ -169,6 +188,7 @@ export default function RepairRequestForm() {
 
       {message ? (
         <p
+          aria-live="polite"
           className={`rounded-2xl border px-4 py-3 text-sm font-bold ${
             state === "sent"
               ? "border-[rgba(156,175,136,0.35)] bg-[rgba(156,175,136,0.1)] text-[var(--green-soft)]"
