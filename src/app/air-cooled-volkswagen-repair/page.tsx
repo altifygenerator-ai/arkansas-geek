@@ -4,6 +4,7 @@ import { FaArrowRight, FaEnvelope, FaWrench } from "react-icons/fa6";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { siteEmail, siteName, siteUrl } from "@/lib/site";
+import { vwServicePages } from "@/data/seo-content";
 
 const pagePath = "/air-cooled-volkswagen-repair";
 const pageUrl = `${siteUrl}${pagePath}`;
@@ -390,6 +391,47 @@ export default function AirCooledVolkswagenRepairPage() {
             </div>
           </div>
         </section>
+
+        <section className="border-y border-[var(--line)] bg-[rgba(244,239,227,0.025)] py-20 md:py-28">
+          <div className="container-custom">
+            <div className="grid gap-10 lg:grid-cols-[0.4fr_0.6fr]">
+              <div>
+                <div className="eyebrow">VW Work Details</div>
+                <h2 className="section-title mt-5">See the smaller jobs Arkansas Geek may consider.</h2>
+                <p className="lead mt-6">
+                  These pages stay inside the same limits already stated here:
+                  case-by-case air-cooled Volkswagen work, not major rebuilds or
+                  full restoration projects.
+                </p>
+              </div>
+
+              <div className="grid gap-4">
+                {vwServicePages.map((service) => (
+                  <Link
+                    key={service.slug}
+                    href={"/air-cooled-volkswagen-repair/" + service.slug}
+                    className="group fresh-panel p-6 transition hover:-translate-y-1"
+                  >
+                    <p className="font-mono-custom text-xs font-black uppercase tracking-[0.14em] text-[var(--amber-soft)]">
+                      Air-Cooled Volkswagen
+                    </p>
+                    <h3 className="font-heading mt-3 text-3xl font-black tracking-[-0.055em] text-[var(--cream)]">
+                      {service.shortTitle}
+                    </h3>
+                    <p className="mt-3 leading-7 text-[var(--cream-soft)]">
+                      {service.metaDescription}
+                    </p>
+                    <span className="mt-5 inline-flex items-center gap-2 font-black text-[var(--amber-soft)]">
+                      View VW page
+                      <FaArrowRight className="transition group-hover:translate-x-1" />
+                    </span>
+                  </Link>
+                ))}
+              </div>
+            </div>
+          </div>
+        </section>
+
       </main>
 
       <Footer />
