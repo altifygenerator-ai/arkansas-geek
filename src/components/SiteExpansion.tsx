@@ -20,9 +20,9 @@ export default function SiteExpansion() {
               </h2>
             </div>
             <p className="lead">
-              The main computer-repair lane now has focused pages for the work
-              already described across Arkansas Geek: hardware repair,
-              troubleshooting, upgrades, and computer builds.
+              Arkansas Geek handles hardware repair, troubleshooting, upgrades,
+              and computer builds. Each service is explained clearly so you can
+              start in the right place.
             </p>
           </div>
 
@@ -70,13 +70,13 @@ export default function SiteExpansion() {
             <div>
               <div className="eyebrow">Arkansas Service Areas</div>
               <h2 className="section-title mt-5">
-                Easier to find from the places already listed on the site.
+                Computer repair information for the Arkansas areas already served.
               </h2>
               <p className="lead mt-6">
-                City pages do not pretend Arkansas Geek has a storefront in
-                every town. They give people in the listed service areas a
-                direct path to the right repair information and the request
-                form.
+                Arkansas Geek accepts repair requests from the listed Arkansas
+                service areas. These are service areas, not separate storefronts,
+                so send the details first and the location can be reviewed with
+                the job.
               </p>
               <Link href="/service-areas" className="btn-secondary mt-8">
                 View All Service Areas
@@ -111,12 +111,12 @@ export default function SiteExpansion() {
             <div>
               <div className="eyebrow">Air-Cooled VW Details</div>
               <h2 className="section-title mt-5">
-                The specialty side now explains the jobs it may actually take.
+                Smaller air-cooled VW work, explained clearly.
               </h2>
               <p className="lead mt-6">
                 Brake work, suspension work, and smaller maintenance or repair
-                needs now have their own honest pages, all with the same
-                case-by-case limits already stated on the site.
+                needs are all handled within the same case-by-case limits:
+                practical smaller jobs, not major rebuilds or full restorations.
               </p>
             </div>
             <div className="grid gap-4">

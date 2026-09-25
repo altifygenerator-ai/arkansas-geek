@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { FaArrowRight, FaEnvelope, FaTerminal } from "react-icons/fa6";
 import Header from "@/components/Header";
@@ -187,10 +188,12 @@ export default function ComputerRepairPage() {
 
               <div className="relative">
                 <div className="absolute -right-7 top-8 hidden h-[82%] w-36 overflow-hidden rounded-[2rem] border border-[var(--page-accent-soft)]/25 opacity-75 shadow-[var(--shadow-soft)] lg:block">
-                  <img
+                  <Image
                     src="/images/pc-1.jpg"
                     alt="Computer repair hardware photo"
-                    className="h-full w-full object-cover"
+                    fill
+                    sizes="144px"
+                    className="object-cover"
                   />
                   <div className="absolute inset-0 bg-[rgba(13,17,16,0.38)]" />
                   <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-transparent to-black/70" />
@@ -305,10 +308,12 @@ export default function ComputerRepairPage() {
         <section className="border-b border-[var(--line)]">
           <div className="container-custom py-10 md:py-14">
             <div className="relative h-[22rem] overflow-hidden rounded-[2.75rem] border border-[var(--page-accent-soft)]/25 shadow-[var(--shadow-soft)] md:h-[26rem]">
-              <img
+              <Image
                 src="/images/pc-2.jpg"
                 alt="Computer repair troubleshooting photo"
-                className="h-full w-full object-cover"
+                fill
+                sizes="(max-width: 1120px) 100vw, 1120px"
+                className="object-cover"
               />
 
               <div className="absolute inset-0 bg-gradient-to-r from-[rgba(13,17,16,0.9)] via-[rgba(13,17,16,0.38)] to-[rgba(13,17,16,0.76)]" />
@@ -359,9 +364,12 @@ export default function ComputerRepairPage() {
                 </Link>
 
                 <div className="mt-8 hidden overflow-hidden rounded-[2rem] border border-[var(--page-accent-soft)]/25 shadow-[var(--shadow-soft)] lg:block">
-                  <img
+                  <Image
                     src="/images/pc-3.jpg"
                     alt="Computer repair diagnostic photo"
+                    width={1200}
+                    height={800}
+                    sizes="42vw"
                     className="h-72 w-full object-cover"
                   />
 
@@ -444,9 +452,9 @@ export default function ComputerRepairPage() {
                 <div className="eyebrow">Computer Repair Services</div>
                 <h2 className="section-title mt-5">Go straight to the kind of help you need.</h2>
                 <p className="lead mt-6">
-                  These pages break out the computer work already handled through
-                  Arkansas Geek without turning the site into a list of services
-                  that are not actually offered.
+                  Hardware repair, troubleshooting, upgrades, and computer builds each
+                  have their own page so you can get to the right information
+                  without digging through a generic service list.
                 </p>
               </div>
 
@@ -481,7 +489,7 @@ export default function ComputerRepairPage() {
           <div className="container-custom">
             <div className="mb-10 max-w-4xl">
               <div className="eyebrow">Service Areas</div>
-              <h2 className="section-title mt-5">Computer repair pages for the Arkansas areas already served.</h2>
+              <h2 className="section-title mt-5">Computer repair for the Arkansas areas already served.</h2>
               <p className="lead mt-6">
                 City pages are service-area information, not separate storefronts.
                 Start with the repair request so the issue and location can be

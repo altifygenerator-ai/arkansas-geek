@@ -33,6 +33,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
     { path: "/about", priority: 0.75, changeFrequency: "monthly" as const },
     { path: "/faq", priority: 0.8, changeFrequency: "monthly" as const },
+    { path: "/privacy", priority: 0.4, changeFrequency: "yearly" as const },
   ];
 
   const computerRoutes = computerServicePages.map((page) => ({
