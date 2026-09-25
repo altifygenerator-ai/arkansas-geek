@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { FaArrowRight, FaComputer, FaWrench } from "react-icons/fa6";
 import FadeIn from "@/components/FadeIn";
@@ -47,10 +48,12 @@ export default function ServiceSplit() {
                   className="group block overflow-hidden rounded-[2.4rem] border border-[var(--line)] bg-[rgba(13,17,16,0.66)] shadow-[var(--shadow-soft)] transition hover:-translate-y-1 hover:border-[var(--line-strong)]"
                 >
                   <div className="relative h-72 overflow-hidden">
-                    <img
+                    <Image
                       src={service.image}
                       alt={`${service.title} service photo`}
-                      className="h-full w-full object-cover transition duration-700 group-hover:scale-105"
+                      fill
+                      sizes="(max-width: 1024px) 100vw, 50vw"
+                      className="object-cover transition duration-700 group-hover:scale-105"
                     />
 
                     <div className="absolute inset-0 bg-gradient-to-t from-[var(--bg)] via-[rgba(13,17,16,0.45)] to-transparent" />
