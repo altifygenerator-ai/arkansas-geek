@@ -36,9 +36,9 @@ export default function WhyArkansasGeek() {
         <div className="grid gap-14 lg:grid-cols-[0.42fr_0.58fr] lg:items-start">
           <FadeIn>
             <SectionHeading
-              eyebrow="Site Direction"
-              title="Repair help without making the site confusing."
-              text="Computer repair and air-cooled Volkswagen repair are different audiences, so the site separates them clearly while keeping everything under the Arkansas Geek name."
+              eyebrow="Why Arkansas Geek"
+              title="Straightforward repair help, with the right lane for the job."
+              text="Computer problems and classic Volkswagen work call for different questions and different kinds of troubleshooting. Arkansas Geek keeps both practical, clear, and honest about what work fits."
             />
           </FadeIn>
 
