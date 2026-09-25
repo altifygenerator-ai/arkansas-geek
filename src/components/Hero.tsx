@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import {
@@ -67,10 +68,13 @@ export default function Hero() {
                 index % 2 === 0 ? "translate-y-14" : "-translate-y-10"
               }`}
             >
-              <img
+              <Image
                 src={image.src}
                 alt={`${image.label} photo for Arkansas Geek`}
-                className={`h-full w-full object-cover ${
+                fill
+                sizes="160px"
+                priority={index < 2}
+                className={`object-cover ${
                   image.src.includes("bug")
                     ? "scale-100 object-center"
                     : "scale-105 object-center"
