@@ -1,5 +1,6 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Analytics } from "@vercel/analytics/react";
+import { Inter, JetBrains_Mono, Space_Grotesk } from "next/font/google";
 import {
   defaultDescription,
   defaultOgImage,
@@ -9,6 +10,31 @@ import {
   siteUrl,
 } from "@/lib/site";
 import "./globals.css";
+
+const inter = Inter({
+  subsets: ["latin"],
+  variable: "--font-inter",
+  display: "swap",
+});
+
+const jetBrainsMono = JetBrains_Mono({
+  subsets: ["latin"],
+  variable: "--font-mono",
+  display: "swap",
+});
+
+const spaceGrotesk = Space_Grotesk({
+  subsets: ["latin"],
+  variable: "--font-heading",
+  display: "swap",
+});
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  themeColor: "#0d1110",
+  colorScheme: "dark",
+};
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
@@ -125,7 +151,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>
+      <body className={`${inter.variable} ${jetBrainsMono.variable} ${spaceGrotesk.variable}`}>
         {children}
         <Analytics />
       </body>
