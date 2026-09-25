@@ -22,6 +22,7 @@ export const metadata: Metadata = {
   description: defaultDescription,
 
   applicationName: siteName,
+  manifest: "/manifest.webmanifest",
   authors: [{ name: siteName }],
   creator: siteName,
   publisher: siteName,
