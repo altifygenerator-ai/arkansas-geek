@@ -17,8 +17,15 @@ export async function POST(request: Request) {
     const equipment = clean(body.equipment);
     const issue = clean(body.issue);
     const tried = clean(body.tried);
+    const website = clean(body.website);
 
-    if (!name || !email || !requestType || !equipment || !issue) {
+    if (website) {
+      return NextResponse.json({ ok: true });
+    }
+
+    const emailLooksValid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+
+    if (!name || !emailLooksValid || !requestType || !equipment || !issue) {
       return NextResponse.json(
         { error: "Missing required fields" },
         { status: 400 }
