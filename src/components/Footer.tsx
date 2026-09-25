@@ -112,6 +112,9 @@ export default function Footer() {
               <Link href="/faq" className="text-sm text-[var(--muted)] transition hover:text-[var(--cream)]">
                 FAQ
               </Link>
+              <Link href="/privacy" className="text-sm text-[var(--muted)] transition hover:text-[var(--cream)]">
+                Privacy
+              </Link>
               <a
                 href={"mailto:" + siteEmail}
                 className="text-sm text-[var(--muted)] transition hover:text-[var(--cream)]"
