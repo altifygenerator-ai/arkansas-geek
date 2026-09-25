@@ -4,6 +4,7 @@ import Hero from "@/components/Hero";
 import ServiceSplit from "@/components/ServiceSplit";
 import WhyArkansasGeek from "@/components/WhyArkansasGeek";
 import ExperienceSection from "@/components/ExperienceSection";
+import SiteExpansion from "@/components/SiteExpansion";
 import ContactCTA from "@/components/ContactCTA";
 import StickyContactButton from "@/components/StickyContactButton";
 import Footer from "@/components/Footer";
@@ -110,6 +111,7 @@ export default function HomePage() {
         <ServiceSplit />
         <WhyArkansasGeek />
         <ExperienceSection />
+        <SiteExpansion />
         <ContactCTA />
       </main>
       <Footer />
